@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Particle Effects</title>
+    <style>
+      body {
+        margin: 0;
+        overflow: hidden;
+        background-color: #000;
+      }
+
+      #particles-js {
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+      }
+
+      .info-container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: left;
+      }
+
+      .title {
+        font-size: 36px;
+        font-weight: bold;
+        color: #fff;
+        margin-bottom: 10px;
+        font-family: "Montserrat", sans-serif;
+      }
+
+      .info {
+        font-size: 24px;
+        color: cyan;
+        font-family: "Montserrat", sans-serif;
+      }
+
+      .footer {
+        position: absolute;
+        bottom: 30px; /* Increased bottom padding */
+        left: 50%;
+        transform: translateX(-50%);
+        color: #ccc;
+        font-family: "Montserrat", sans-serif;
+        font-size: 14px; /* Smaller font size */
+      }
+    </style>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="particles-js"></div>
+
+    <div class="info-container">
+      <div class="title">Petr Vnenk</div>
+      <div class="info">Software Developer, petr.vnenk@applifting.cz</div>
+    </div>
+
+    <div class="footer">&copy; 2023 Petr Vnenk. All rights reserved.</div>
+
+    <!-- Remember to replace the path below with your own local or CDN path -->
+    <script src="/particles.min.js"></script>
+
+    <script>
+      particlesJS.load("particles-js", "./particles.json", function () {
+        console.log("particles.js config loaded");
+      });
+    </script>
+  </body>
+</html>
