@@ -117,13 +117,6 @@ const lessonData = {
   questions: [
     {
       type: "sentence",
-      czech: "Máš vždycky pravdu",
-      english: "You are always right.",
-      words: ["You", "are", "always", "right"],
-      difficulty: "beginner",
-    },
-    {
-      type: "sentence",
       czech: "Miluju tě",
       english: "I love you.",
       words: ["I", "love", "you"],
@@ -148,6 +141,13 @@ const lessonData = {
       czech: "Jsem celá tvoje",
       english: "I am all yours.",
       words: ["I", "am", "all", "yours"],
+      difficulty: "beginner",
+    },
+    {
+      type: "sentence",
+      czech: "Máš vždycky pravdu",
+      english: "You are always right.",
+      words: ["You", "are", "always", "right"],
       difficulty: "beginner",
     },
     {
