@@ -1,0 +1,297 @@
+{
+  "lessons": [
+    {
+      "id": "basic-greetings",
+      "title": "Basic Greetings",
+      "description": "Learn essential Czech greetings and polite expressions",
+      "questions": [
+        {
+          "type": "sentence",
+          "czech": "Dneska jsem byla moc zlobivá kočička",
+          "english": "Today I was a very naughty kitty",
+          "words": ["Today", "I", "was", "a", "very", "naughty", "kitty"],
+          "difficulty": "beginner"
+        },
+        {
+          "type": "sentence",
+          "czech": "Jsem celá tvoje",
+          "english": "I am all yours.",
+          "words": ["I", "am", "all", "yours"],
+          "difficulty": "beginner"
+        },
+        {
+          "type": "sentence",
+          "czech": "Máš vždycky pravdu",
+          "english": "You are always right.",
+          "words": ["You", "are", "always", "right"],
+          "difficulty": "beginner"
+        },
+        {
+          "type": "sentence",
+          "czech": "Miluju tě",
+          "english": "I love you.",
+          "words": ["I", "love", "you"],
+          "difficulty": "beginner"
+        },
+        {
+          "type": "sentence",
+          "czech": "Chci tě",
+          "english": "I want you.",
+          "words": ["I", "want", "you"],
+          "difficulty": "beginner"
+        },
+        {
+          "type": "sentence",
+          "czech": "Co si mám dneska v noci obléct?",
+          "english": "What should I wear tonight?",
+          "words": ["What", "should", "I", "wear", "tonight"],
+          "difficulty": "beginner"
+        },
+        {
+          "type": "sentence",
+          "czech": "Proč musím být dneska znova spoutaná?",
+          "english": "Why do I have to be tied up again today?",
+          "words": [
+            "Why",
+            "do",
+            "I",
+            "have",
+            "to",
+            "be",
+            "tied",
+            "up",
+            "again",
+            "today"
+          ],
+          "difficulty": "beginner"
+        },
+        {
+          "type": "vocabulary",
+          "czech": "Pejsek",
+          "english": "Doggy",
+          "options": ["Doggy", "Cat", "Bird", "Fish"],
+          "difficulty": "beginner"
+        },
+        {
+          "type": "vocabulary",
+          "czech": "Kočička",
+          "english": "Kitty",
+          "options": ["Dog", "Kitty", "Bird", "Fish"],
+          "difficulty": "beginner"
+        },
+        {
+          "type": "vocabulary",
+          "czech": "Pouta",
+          "english": "Handcuffs",
+          "options": ["Handcuffs", "Kitty", "Bird", "Fish"],
+          "difficulty": "beginner"
+        }
+      ]
+    },
+    {
+      "id": "common-phrases",
+      "title": "Common Phrases",
+      "description": "Everyday Czech phrases for basic communication",
+      "questions": [
+        {
+          "type": "sentence",
+          "czech": "Mám hlad.",
+          "english": "I am hungry.",
+          "words": ["I", "am", "hungry"],
+          "difficulty": "beginner"
+        },
+        {
+          "type": "sentence",
+          "czech": "Kolik to stojí?",
+          "english": "How much does it cost?",
+          "words": ["How", "much", "does", "it", "cost"],
+          "difficulty": "beginner"
+        },
+        {
+          "type": "sentence",
+          "czech": "Nerozumím.",
+          "english": "I don't understand.",
+          "words": ["I", "don't", "understand"],
+          "difficulty": "beginner"
+        },
+        {
+          "type": "vocabulary",
+          "czech": "Dům",
+          "english": "House",
+          "options": ["Car", "House", "Tree", "Book"],
+          "difficulty": "beginner"
+        },
+        {
+          "type": "vocabulary",
+          "czech": "Voda",
+          "english": "Water",
+          "options": ["Water", "Milk", "Juice", "Coffee"],
+          "difficulty": "beginner"
+        }
+      ]
+    },
+    {
+      "id": "food-and-drink",
+      "title": "Food and Drink",
+      "description": "Learn Czech words for food and beverages",
+      "questions": [
+        {
+          "type": "sentence",
+          "czech": "Chci pivo, prosím.",
+          "english": "I want beer, please.",
+          "words": ["I", "want", "beer", "please"],
+          "difficulty": "beginner"
+        },
+        {
+          "type": "sentence",
+          "czech": "Máte vegetariánské jídlo?",
+          "english": "Do you have vegetarian food?",
+          "words": ["Do", "you", "have", "vegetarian", "food"],
+          "difficulty": "intermediate"
+        },
+        {
+          "type": "vocabulary",
+          "czech": "Chléb",
+          "english": "Bread",
+          "options": ["Bread", "Rice", "Pasta", "Potato"],
+          "difficulty": "beginner"
+        },
+        {
+          "type": "vocabulary",
+          "czech": "Mléko",
+          "english": "Milk",
+          "options": ["Water", "Milk", "Juice", "Tea"],
+          "difficulty": "beginner"
+        },
+        {
+          "type": "vocabulary",
+          "czech": "Sýr",
+          "english": "Cheese",
+          "options": ["Meat", "Cheese", "Fish", "Chicken"],
+          "difficulty": "beginner"
+        }
+      ]
+    },
+    {
+      "id": "directions",
+      "title": "Directions and Places",
+      "description": "Asking for directions and talking about places",
+      "questions": [
+        {
+          "type": "sentence",
+          "czech": "Kde je toaleta?",
+          "english": "Where is the toilet?",
+          "words": ["Where", "is", "the", "toilet"],
+          "difficulty": "beginner"
+        },
+        {
+          "type": "sentence",
+          "czech": "Jděte rovně a pak doprava.",
+          "english": "Go straight and then right.",
+          "words": ["Go", "straight", "and", "then", "right"],
+          "difficulty": "intermediate"
+        },
+        {
+          "type": "vocabulary",
+          "czech": "Nemocnice",
+          "english": "Hospital",
+          "options": ["School", "Hospital", "Bank", "Restaurant"],
+          "difficulty": "beginner"
+        },
+        {
+          "type": "vocabulary",
+          "czech": "Obchod",
+          "english": "Shop",
+          "options": ["Shop", "Park", "Museum", "Library"],
+          "difficulty": "beginner"
+        }
+      ]
+    },
+    {
+      "id": "numbers",
+      "title": "Numbers and Counting",
+      "description": "Learn Czech numbers and counting",
+      "questions": [
+        {
+          "type": "sentence",
+          "czech": "Kolik je hodin?",
+          "english": "What time is it?",
+          "words": ["What", "time", "is", "it"],
+          "difficulty": "beginner"
+        },
+        {
+          "type": "vocabulary",
+          "czech": "Jeden",
+          "english": "One",
+          "options": ["One", "Two", "Three", "Four"],
+          "difficulty": "beginner"
+        },
+        {
+          "type": "vocabulary",
+          "czech": "Pět",
+          "english": "Five",
+          "options": ["Three", "Four", "Five", "Six"],
+          "difficulty": "beginner"
+        },
+        {
+          "type": "vocabulary",
+          "czech": "Deset",
+          "english": "Ten",
+          "options": ["Eight", "Nine", "Ten", "Eleven"],
+          "difficulty": "beginner"
+        }
+      ]
+    }
+  ],
+  "vocabulary": {
+    "animals": [
+      { "czech": "Kočka", "english": "Cat" },
+      { "czech": "Pes", "english": "Dog" },
+      { "czech": "Pták", "english": "Bird" },
+      { "czech": "Ryba", "english": "Fish" },
+      { "czech": "Kůň", "english": "Horse" },
+      { "czech": "Kráva", "english": "Cow" }
+    ],
+    "food": [
+      { "czech": "Jablko", "english": "Apple" },
+      { "czech": "Chléb", "english": "Bread" },
+      { "czech": "Mléko", "english": "Milk" },
+      { "czech": "Voda", "english": "Water" },
+      { "czech": "Sýr", "english": "Cheese" },
+      { "czech": "Maso", "english": "Meat" }
+    ],
+    "places": [
+      { "czech": "Dům", "english": "House" },
+      { "czech": "Obchod", "english": "Shop" },
+      { "czech": "Nemocnice", "english": "Hospital" },
+      { "czech": "Škola", "english": "School" },
+      { "czech": "Nádraží", "english": "Station" },
+      { "czech": "Restaurace", "english": "Restaurant" }
+    ],
+    "colors": [
+      { "czech": "Červená", "english": "Red" },
+      { "czech": "Modrá", "english": "Blue" },
+      { "czech": "Zelená", "english": "Green" },
+      { "czech": "Žlutá", "english": "Yellow" },
+      { "czech": "Černá", "english": "Black" },
+      { "czech": "Bílá", "english": "White" }
+    ]
+  },
+  "commonPhrases": [
+    { "czech": "Dobrý den", "english": "Good day" },
+    { "czech": "Dobré ráno", "english": "Good morning" },
+    { "czech": "Dobrý večer", "english": "Good evening" },
+    { "czech": "Dobrou noc", "english": "Good night" },
+    { "czech": "Děkuji", "english": "Thank you" },
+    { "czech": "Prosím", "english": "Please" },
+    { "czech": "Promiňte", "english": "Excuse me" },
+    { "czech": "Nerozumím", "english": "I don't understand" },
+    { "czech": "Mluvíte anglicky?", "english": "Do you speak English?" },
+    { "czech": "Kde je...?", "english": "Where is...?" },
+    { "czech": "Kolik to stojí?", "english": "How much does it cost?" },
+    { "czech": "Mám hlad", "english": "I am hungry" },
+    { "czech": "Mám žízeň", "english": "I am thirsty" },
+    { "czech": "Jmenuji se...", "english": "My name is..." },
+    { "czech": "Jak se máte?", "english": "How are you?" }
+  ]
+}
