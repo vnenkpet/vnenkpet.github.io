@@ -131,10 +131,10 @@ const imageSrc = computed(() => {
   vertical-align: middle;
 }
 
-/* Staggered list animation - triggers when slide becomes visible */
+/* Bullet list: visible bullets and clear separation */
 .accomplishments :deep(ul) {
-  list-style: none;
-  padding-left: 0;
+  list-style: disc;
+  padding-left: 1.5em;
   margin: 0.5em 0;
 }
 
@@ -142,6 +142,11 @@ const imageSrc = computed(() => {
   opacity: 0;
   transform: translateX(20px);
   animation: accomplishStagger 0.5s ease-out forwards;
+  margin-bottom: 0.6em;
+}
+
+.accomplishments :deep(li:last-child) {
+  margin-bottom: 0;
 }
 
 .accomplishments :deep(li:nth-child(1)) { animation-delay: 0.15s; }
@@ -162,9 +167,18 @@ const imageSrc = computed(() => {
   }
 }
 
-/* Style headings in accomplishments */
+/* Project title and year subtitle */
 .accomplishments :deep(h2) {
-  margin-bottom: 0.75em;
+  margin-bottom: 0.15em;
   font-size: 1.5em;
+}
+
+.accomplishments :deep(h3) {
+  font-size: 0.95em;
+  font-weight: 500;
+  opacity: 0.85;
+  margin-top: 0;
+  margin-bottom: 0.75em;
+  letter-spacing: 0.02em;
 }
 </style>
