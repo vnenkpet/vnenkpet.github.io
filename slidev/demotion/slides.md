@@ -5,14 +5,21 @@ layout: cover
 
 <div class="cover-slide">
   <div class="cover-bg" aria-hidden="true" />
-  <div
-    v-motion
-    :initial="{ opacity: 0, y: 20 }"
-    :enter="{ opacity: 1, y: 0, transition: { duration: 500 } }"
-    class="cover-overlay"
-  >
-    <h1 class="cover-title">Role Change & Compensation Request</h1>
-    <div class="cover-name-block">
+  <div class="cover-overlay">
+    <h1
+      v-motion
+      :initial="{ opacity: 0, y: 28, scale: 0.96 }"
+      :enter="{ opacity: 1, y: 0, scale: 1, transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] } }"
+      class="cover-title"
+    >
+      Role Change & Compensation Request
+    </h1>
+    <div
+      v-motion
+      :initial="{ opacity: 0, y: 16 }"
+      :enter="{ opacity: 1, y: 0, transition: { duration: 0.5, delay: 200, ease: [0.22, 1, 0.36, 1] } }"
+      class="cover-name-block"
+    >
       <p class="cover-name">Petr Vnenk</p>
       <p class="cover-role">Senior engineer, former Tech Lead</p>
     </div>
@@ -44,9 +51,9 @@ layout: cover
   z-index: 1;
 }
 .cover-title {
-  font-size: clamp(1.25rem, 2.8vw, 2rem);
+  font-size: clamp(1rem, 2.2vw, 1.5rem);
   margin: 0;
-  margin-top: 12vh;
+  margin-top: 4vh;
   line-height: 1.2;
 }
 .cover-name-block {
@@ -57,13 +64,11 @@ layout: cover
   font-weight: 700;
   margin: 0 0 0.15rem 0;
   letter-spacing: 0.02em;
-  text-shadow: 0 0 40px #000;
 }
 .cover-role {
   font-size: 1rem;
   opacity: 0.95;
   margin: 0;
-  text-shadow: 0 0 30px #000;
 }
 </style>
 
@@ -145,6 +150,7 @@ layout: cover
   z-index: 2;
   font-size: clamp(2rem, 5vw, 3rem);
   margin: 0;
+  color: #fff;
   opacity: 0;
   transform: translateY(24px) scale(0.96);
   animation: highlights-heading-in 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.2s forwards;
@@ -237,66 +243,90 @@ image: /assets/deliella.png
 - Established a clear technical roadmap for the platform
 
 ---
-
-# Why This Ask
-
-<div
-  v-motion
-  :initial="{ opacity: 0 }"
-  :enter="{ opacity: 1, transition: { duration: 300 } }"
->
-<v-clicks>
-
-- **Track record**: Tech lead since ~2022; templates and internal work used across many projects (Skoala, Sakurabook, Refsite, Remangu, Investbay, Toggl Rounder, Deliciously Ella, Hannover Messe).
-- **Evidence**: Node.js competency model, tech radar, internal knowledge base — I’ll keep contributing these in non‑project time.
-- **Focus**: I want to enjoy delivery on projects and help improve **AI adoption**; architect later when it fits.
-
-</v-clicks>
-</div>
-
+layout: SectionTitle
 ---
 
-# Summary
-
-<v-clicks>
-
-- **Ask**: Role change to Senior + **top of Senior band (750)**; support new Tech Lead in non‑project time.
-- **Now**: Project delivery + **AI adoption** across the company.
-- **Later**: Architect when it feels natural.
-
-</v-clicks>
+# Internal Work & Representing Applifting
 
 ---
+layout: ProjectShowcaseRight
+image: /assets/skoala.png
+---
 
-# The Ask
+## Tech Leading & Internal Work
 
-<v-clicks>
+- Main author and long-term maintainer of Applifting's backend/full-stack templates, powering **Skoala**, Sakurabook, Refsite, Remangu, Investbay, Toggl Rounder, Deliciously Ella, Hannover Messe, and others
+- Revamp of the entire **Node.js competency model**
+- Creation and maintenance of a **Node.js tech radar** (frameworks, libraries, tooling)
+- Creation and maintenance of a **backend/Node.js knowledge base** for internal use
+
+---
+layout: ProjectShowcaseRight
+image: /assets/vse/photo.jpeg
+---
+
+## University of Economics in Prague
+
+- Co-teaching the **Web Project Development** course (backend focus)
+- Proposed and implemented a major revamp of the backend tech stack based on Applifting's internal templates
+- Updated practical classes for backend best practices across varying student skill levels
+- Created a new practical class focused on **AI-driven development**
+- Two course runs: first teaching support and improvements; second full tech-stack revamp
+- Transitioning from active teaching to a technical-support role
+
+---
+layout: ProjectShowcaseRight
+image: /assets/crewtalks/prisma.png
+---
+
+## Crew Talks
+
+- Talk on **Prisma 2** shortly after release with a practical live example
+- Talk on **Cursor and agentic development** before mainstream adoption — complete web game without writing code manually
+
+---
+layout: SectionTitle
+---
+
+# Other Skills
+
+---
+layout: ProjectShowcaseRight
+video: /assets/bladeimpact/video.mp4
+---
+
+## Blade Impact VR
+
+- Solo development and release of a **commercial VR title** ([bladeimpactvr.com](https://www.bladeimpactvr.com/))
+- Full lifecycle: learning, development, release, and marketing
+- **VR / Unity / C#** — handled independently
+- Generated several thousand USD in revenue to date
+
+---
+layout: ContentStagger
+---
+
+# Going Forward...
 
 - **Role change**: Step back from Tech Lead to **Senior** — focus on hands‑on project work and technical depth.
-- **Compensation**: Target <span v-mark.underline.orange>**top of Senior band (750)**</span> given experience and impact (tech lead since ~2022, templates, greenfield & legacy delivery).
 - **Ongoing contribution**: Support the new Tech Lead in **non‑project time** (reviews, standards, onboarding).
 - **Longer term**: Open to growing into **architect** when it feels natural. For now: enjoy delivery and help drive **AI adoption** in the company.
 
-</v-clicks>
-
+---
+layout: ContentStagger
 ---
 
-# Thank You
+# What I'm asking
 
-<div
-  v-motion
-  :initial="{ opacity: 0, y: 15 }"
-  :enter="{ opacity: 1, y: 0, transition: { duration: 400 } }"
-  v-click
->
-Thank you for considering this.
-</div>
+- **Role change**: Step back from Tech Lead to **Senior** — focus on hands‑on project work and technical depth.
+- **Compensation**: Target <span v-mark.underline.orange>**top of Senior band (750)**</span> given experience and impact (tech lead since ~2022, templates, greenfield & legacy delivery).
 
-<div
-  v-motion
-  :initial="{ opacity: 0, y: 15 }"
-  :enter="{ opacity: 1, y: 0, transition: { duration: 400 } }"
-  v-click
->
-Happy to discuss next steps and how we make this work for both sides.
-</div>
+<SalaryLine />
+
+- **Ongoing contribution**: Support the new Tech Lead in **non‑project time** (reviews, standards, onboarding).
+
+---
+layout: SectionTitle
+---
+
+# Thank you
