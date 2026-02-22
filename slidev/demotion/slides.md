@@ -79,6 +79,7 @@ layout: cover
   <div class="highlights-bg-tiles" aria-hidden="true">
     <HighlightsGrid />
   </div>
+  <div class="highlights-gradient" aria-hidden="true"></div>
   <HighlightsPulse />
   <h1 class="highlights-heading">Project Highlights</h1>
 </div>
@@ -98,10 +99,10 @@ layout: cover
 }
 .highlights-bg-tiles {
   position: fixed;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
+  left: -2px;
+  top: -2px;
+  right: -2px;
+  bottom: -8px;
   z-index: 0;
   overflow: hidden;
   opacity: 1;
@@ -109,18 +110,19 @@ layout: cover
   perspective-origin: 50% 50%;
 }
 .highlights-gradient {
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
+  position: fixed;
+  left: -2px;
+  top: -2px;
+  right: -2px;
+  bottom: -8px;
   z-index: 1;
   pointer-events: none;
   opacity: 0;
-  /* transition: opacity 0.7s ease-out; */
+  transition: opacity 0.7s ease-out;
   background: radial-gradient(
-    ellipse 55% 55% at 50% 50%,
-    rgba(0, 0, 0, 0.2) 0%,
+    ellipse 50% 50% at 50% 50%,
+    rgba(0, 0, 0, 0.45) 0%,
+    rgba(0, 0, 0, 0.85) 45%,
     rgba(0, 0, 0, 1) 100%
   );
 }
@@ -161,10 +163,8 @@ layout: cover
 </style>
 
 ---
-
 layout: ProjectShowcase
 image: /assets/digitoo.jpg
-
 ---
 
 ## Digitoo
@@ -175,10 +175,8 @@ image: /assets/digitoo.jpg
 - Transformed from multi‑provider integration to a standalone product with high client satisfaction
 
 ---
-
 layout: ProjectShowcase
 image: /assets/refsite.png
-
 ---
 
 ## Refsite
@@ -189,10 +187,8 @@ image: /assets/refsite.png
 - Mentored junior engineers while delivering a robust, scalable system
 
 ---
-
 layout: ProjectShowcase
 image: /assets/sakurabook.png
-
 ---
 
 ## Sakurabook
@@ -203,10 +199,8 @@ image: /assets/sakurabook.png
 - Full‑stack delivery with internationalization and e‑commerce integration
 
 ---
-
 layout: ProjectShowcase
 image: /assets/investbay.png
-
 ---
 
 ## Investbay
@@ -217,10 +211,8 @@ image: /assets/investbay.png
 - Leveraged internal templates and creative compromises to ship a production‑ready solution
 
 ---
-
 layout: ProjectShowcase
 image: /assets/remangu.webp
-
 ---
 
 ## Remangu
@@ -233,10 +225,8 @@ image: /assets/remangu.webp
 - Created playtesting platform demo for GDC 2025 with pre‑release AWS tech
 
 ---
-
 layout: ProjectShowcase
 image: /assets/deliella.png
-
 ---
 
 ## Deliciously Ella

@@ -11,7 +11,7 @@ const STAGGER_WINDOW_MS = 2200
 function pulseRandomTile() {
   const slide = document.querySelector('.highlights-title-slide')
   if (!slide) return
-  const track = slide.querySelector('.highlights-bg-track')
+  const track = slide.querySelector('.highlights-grid__track')
   if (!track) return
   const imgs = track.querySelectorAll('img')
   if (imgs.length === 0) return
@@ -23,7 +23,7 @@ function pulseRandomTile() {
 function runStaggeredAppear(slide: Element) {
   if (staggerDone) return
   staggerDone = true
-  const track = slide.querySelector('.highlights-bg-track')
+  const track = slide.querySelector('.highlights-grid__track')
   if (!track) return
   const imgs = track.querySelectorAll('img')
   const delayStyle = (): string => `${Math.random() * STAGGER_WINDOW_MS}ms`
@@ -42,7 +42,9 @@ onMounted(() => {
       const [entry] = entries
       if (entry?.isIntersecting) {
         slide.classList.add('slide-entered')
-        runStaggeredAppear(slide)
+        requestAnimationFrame(() => {
+          requestAnimationFrame(() => runStaggeredAppear(slide))
+        })
       }
     },
     { threshold: 0.2, rootMargin: '0px' }
@@ -62,7 +64,7 @@ onUnmounted(() => {
   const slide = document.querySelector('.highlights-title-slide')
   if (slide) {
     slide.classList.remove('slide-entered')
-    const imgs = slide.querySelectorAll('.highlights-bg-track img')
+    const imgs = slide.querySelectorAll('.highlights-grid__track img')
     imgs.forEach((el) => {
       const htmlEl = el as HTMLElement
       htmlEl.style.animationDelay = ''

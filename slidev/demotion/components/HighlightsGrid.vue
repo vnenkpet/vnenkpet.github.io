@@ -1,41 +1,41 @@
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
+import { ref, onMounted } from "vue";
 
 const ASSETS = [
-  '/assets/digitoo.jpg',
-  '/assets/refsite.png',
-  '/assets/sakurabook.png',
-  '/assets/investbay.png',
-  '/assets/remangu.webp',
-  '/assets/deliella.png',
-  '/assets/lusk.png',
-  '/assets/skoala.png',
-] as const
+  "/assets/digitoo.jpg",
+  "/assets/refsite.png",
+  "/assets/sakurabook.png",
+  "/assets/investbay.png",
+  "/assets/remangu.webp",
+  "/assets/deliella.png",
+  "/assets/lusk.png",
+  "/assets/skoala.png",
+] as const;
 
-const COLS = 24
-const ROWS = 64
-const CELL_H = 50
+const COLS = 24;
+const ROWS = 64;
+const CELL_H = 50;
 
 function shuffleArray<T>(arr: T[]): T[] {
-  const out = [...arr]
+  const out = [...arr];
   for (let i = out.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
-    [out[i], out[j]] = [out[j], out[i]]
+    [out[i], out[j]] = [out[j], out[i]];
   }
-  return out
+  return out;
 }
 
-const displayList = ref<string[]>([])
+const displayList = ref<string[]>([]);
 
 onMounted(() => {
-  const singleRepeat: string[] = []
-  const pool = shuffleArray([...ASSETS])
+  const singleRepeat: string[] = [];
+  const pool = shuffleArray([...ASSETS]);
   for (let i = 0; i < ROWS * COLS; i++) {
-    singleRepeat.push(pool[i % pool.length])
+    singleRepeat.push(pool[i % pool.length]);
   }
-  const shuffled = shuffleArray(singleRepeat)
-  displayList.value = [...shuffled, ...shuffled]
-})
+  const shuffled = shuffleArray(singleRepeat);
+  displayList.value = [...shuffled, ...shuffled];
+});
 </script>
 
 <template>
@@ -58,6 +58,9 @@ onMounted(() => {
   inset: 0;
   overflow: hidden;
   display: flex;
+  transform: rotateX(50deg) rotateY(-10deg) translateY(-700px) scale(2);
+  height: 200%;
+  width: 200%;
   align-items: center;
   justify-content: center;
 }
@@ -76,8 +79,8 @@ onMounted(() => {
 }
 
 .highlights-grid__cell {
-  width: 70px;
-  height: 50px;
+  width: 180px;
+  height: 120px;
   flex-shrink: 0;
   overflow: hidden;
   display: block;
@@ -89,6 +92,32 @@ onMounted(() => {
   object-fit: cover;
   object-position: center;
   display: block;
+  opacity: 0;
+  transform: scale(0.92);
+}
+
+.highlights-grid__cell img.tile-appear {
+  animation: highlights-tile-appear 0.55s ease-out forwards;
+}
+
+.highlights-grid__cell img.pulse-tile {
+  animation: highlights-pulse-tile 0.4s ease-out forwards;
+}
+
+@keyframes highlights-tile-appear {
+  to {
+    opacity: 0.94;
+    transform: scale(1);
+  }
+}
+
+@keyframes highlights-pulse-tile {
+  0% {
+    box-shadow: inset 0 0 0 999px rgba(255, 255, 255, 0.88);
+  }
+  100% {
+    box-shadow: inset 0 0 0 999px rgba(255, 255, 255, 0);
+  }
 }
 
 @keyframes highlights-grid-scroll {
