@@ -71,9 +71,7 @@ layout: cover
 
 # Career & Projects
 
-<div v-click>
-  <Timeline3D />
-</div>
+<Timeline3D />
 
 ---
 
@@ -117,16 +115,18 @@ layout: cover
 }
 .highlights-gradient {
   position: absolute;
-  inset: 0;
+  left: -15%;
+  top: -15%;
+  right: -15%;
+  bottom: -15%;
   z-index: 1;
   pointer-events: none;
   opacity: 0;
   transition: opacity 0.7s ease-out;
-  background: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 0.35) 0%,
-    rgba(0, 0, 0, 0.55) 50%,
-    rgba(0, 0, 0, 0.35) 100%
+  background: radial-gradient(
+    ellipse 55% 55% at 50% 50%,
+    rgba(0, 0, 0, 0.2) 0%,
+    rgba(0, 0, 0, 1) 100%
   );
 }
 .highlights-title-slide.slide-entered .highlights-gradient {
