@@ -52,8 +52,22 @@ const isVideo = computed(() => Boolean(props.video))
               class="screenshot-media"
             >
           </div>
-          <div v-if="!isVideo" class="screenshot-reflection" aria-hidden="true">
-            <img :src="imageSrc" alt="" class="screenshot-reflection-img">
+          <div class="screenshot-reflection" aria-hidden="true">
+            <video
+              v-if="isVideo"
+              :src="videoSrc"
+              autoplay
+              muted
+              loop
+              playsinline
+              class="screenshot-reflection-media"
+            />
+            <img
+              v-else
+              :src="imageSrc"
+              alt=""
+              class="screenshot-reflection-img"
+            >
           </div>
         </div>
       </div>
@@ -116,13 +130,19 @@ const isVideo = computed(() => Boolean(props.video))
   mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0) 60%);
 }
 
-.screenshot-reflection-img {
+.screenshot-reflection-img,
+.screenshot-reflection-media {
   display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
   transform: scaleY(-1);
   filter: blur(3px);
   opacity: 0.5;
+}
+
+.screenshot-reflection-img {
+  height: auto;
 }
 
 @keyframes screenshot-3d-in-right {

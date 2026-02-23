@@ -168,8 +168,26 @@ layout: cover
 </style>
 
 ---
+
+layout: ProjectShowcase
+image: /assets/lusk.png
+
+---
+
+## Lusk
+
+### Pre-Applifting
+
+- **Microservices Node.js platform** — PHP and Node.js; refactoring and evolution of the backend
+- Automated **email scraping** and **document importing** pipelines
+- **Real-time WebSockets-based chat** solution for videocalls
+- Overtook as **main backend engineer** over time
+
+---
+
 layout: ProjectShowcase
 image: /assets/digitoo.jpg
+
 ---
 
 ## Digitoo
@@ -180,8 +198,10 @@ image: /assets/digitoo.jpg
 - Transformed from multi‑provider integration to a standalone product with high client satisfaction
 
 ---
+
 layout: ProjectShowcase
 image: /assets/refsite.png
+
 ---
 
 ## Refsite
@@ -192,8 +212,10 @@ image: /assets/refsite.png
 - Mentored junior engineers while delivering a robust, scalable system
 
 ---
+
 layout: ProjectShowcase
 image: /assets/sakurabook.png
+
 ---
 
 ## Sakurabook
@@ -204,8 +226,10 @@ image: /assets/sakurabook.png
 - Full‑stack delivery with internationalization and e‑commerce integration
 
 ---
+
 layout: ProjectShowcase
 image: /assets/investbay.png
+
 ---
 
 ## Investbay
@@ -216,8 +240,10 @@ image: /assets/investbay.png
 - Leveraged internal templates and creative compromises to ship a production‑ready solution
 
 ---
+
 layout: ProjectShowcase
 image: /assets/remangu.webp
+
 ---
 
 ## Remangu
@@ -230,8 +256,24 @@ image: /assets/remangu.webp
 - Created playtesting platform demo for GDC 2025 with pre‑release AWS tech
 
 ---
+
+layout: ProjectShowcaseRight
+image: /assets/skoala.png
+
+---
+
+## Skoala
+
+- Helped with the inital setup of the project
+- **Battle test of the backend template** I've been working on — proved it in production
+- Checked **most of the boxes** needed for a new project to get **up and running fast**
+- Validated templates, tooling, and practices across a real client delivery
+
+---
+
 layout: ProjectShowcase
 image: /assets/deliella.png
+
 ---
 
 ## Deliciously Ella
@@ -243,14 +285,16 @@ image: /assets/deliella.png
 - Established a clear technical roadmap for the platform
 
 ---
-layout: SectionTitle
----
+
+## layout: SectionTitle
 
 # Internal Work & Representing Applifting
 
 ---
+
 layout: ProjectShowcaseRight
-image: /assets/skoala.png
+image: /assets/internal/template.png
+
 ---
 
 ## Tech Leading & Internal Work
@@ -261,8 +305,10 @@ image: /assets/skoala.png
 - Creation and maintenance of a **backend/Node.js knowledge base** for internal use
 
 ---
+
 layout: ProjectShowcaseRight
 image: /assets/vse/photo.jpeg
+
 ---
 
 ## University of Economics in Prague
@@ -275,8 +321,10 @@ image: /assets/vse/photo.jpeg
 - Transitioning from active teaching to a technical-support role
 
 ---
+
 layout: ProjectShowcaseRight
 image: /assets/crewtalks/prisma.png
+
 ---
 
 ## Crew Talks
@@ -285,14 +333,16 @@ image: /assets/crewtalks/prisma.png
 - Talk on **Cursor and agentic development** before mainstream adoption — complete web game without writing code manually
 
 ---
-layout: SectionTitle
----
+
+## layout: SectionTitle
 
 # Other Skills
 
 ---
+
 layout: ProjectShowcaseRight
 video: /assets/bladeimpact/video.mp4
+
 ---
 
 ## Blade Impact VR
@@ -303,8 +353,8 @@ video: /assets/bladeimpact/video.mp4
 - Generated several thousand USD in revenue to date
 
 ---
-layout: ContentStagger
----
+
+## layout: ContentStagger
 
 # Going Forward...
 
@@ -313,8 +363,8 @@ layout: ContentStagger
 - **Longer term**: Open to growing into **architect** when it feels natural. For now: enjoy delivery and help drive **AI adoption** in the company.
 
 ---
-layout: ContentStagger
----
+
+## layout: ContentStagger
 
 # What I'm asking
 
@@ -326,7 +376,7 @@ layout: ContentStagger
 - **Ongoing contribution**: Support the new Tech Lead in **non‑project time** (reviews, standards, onboarding).
 
 ---
-layout: SectionTitle
----
+
+## layout: SectionTitle
 
 # Thank you
