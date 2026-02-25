@@ -1,0 +1,25 @@
+/* Slight gradient background for all slides – light and dark theme */
+
+/* Light theme: subtle cool gray gradient */
+.slidev-layout {
+  background: linear-gradient(
+    145deg,
+    #fafafa 0%,
+    #f4f4f5 45%,
+    #e4e4e7 100%
+  ) !important;
+}
+
+/* Dark theme: subtle dark gradient (Slidev adds .dark to html) */
+html.dark .slidev-layout {
+  background: linear-gradient(
+    145deg,
+    #0f0f10 0%,
+    #18181b 45%,
+    #27272a 100%
+  ) !important;
+}
+
+/* Cover slide can keep its own background if it sets one; optionally uncomment to force gradient on cover too:
+html.dark .slidev-layout.cover { background: ... !important; }
+*/

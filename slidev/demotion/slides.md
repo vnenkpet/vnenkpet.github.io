@@ -423,6 +423,17 @@ layout: ContentStagger
 - **Ongoing contribution**: Support the new Tech Lead in **non‑project time** (reviews, standards, onboarding).
 
 ---
+layout: DiagramShowcase
+---
+
+## Technical challenges
+
+### Example stack
+
+- **Full-stack architecture** — React, GraphQL/REST, NestJS, Prisma, Postgres
+- **Integrations** — AWS, Stripe, and other third-party services
+
+---
 layout: SectionTitle
 ---
 
