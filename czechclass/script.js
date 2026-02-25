@@ -225,6 +225,21 @@ function init() {
     },
     { once: true }
   );
+
+  // Test hooks for browser automation (no snapshot refs needed):
+  // - ?test=1  → focus Start Lesson so Enter/Space triggers it
+  // - ?startLesson=1  → start lesson immediately
+  // - ?playTest=1  → start lesson and auto-answer all questions correctly until completion
+  const search = window.location.search;
+  const hash = window.location.hash;
+  if (search.includes("playTest=1") || hash === "#playTest") {
+    window.__playTest = true;
+    startLesson();
+  } else if (search.includes("startLesson=1") || hash === "#startLesson") {
+    startLesson();
+  } else if (search.includes("test=1") || hash === "#test") {
+    startLessonBtn.focus();
+  }
 }
 
 // Start the lesson
@@ -278,6 +293,38 @@ function loadQuestion() {
     loadSentenceQuestion();
   } else {
     loadVocabularyQuestion();
+  }
+
+  if (window.__playTest && currentQuestion < lessonData.questions.length) {
+    setTimeout(automateAnswer, 400);
+  }
+}
+
+// Auto-answer current question (test mode only). Selects correct answer and triggers Check.
+function automateAnswer() {
+  if (!currentQuestionData || !window.__playTest) return;
+
+  const options = answerContainer.querySelectorAll(".word-option");
+  if (!options.length) return;
+
+  if (currentQuestionData.type === "vocabulary") {
+    const correctEl = Array.from(options).find(
+      (el) => el.textContent.trim() === currentQuestionData.english
+    );
+    if (correctEl) {
+      selectVocabularyAnswer(currentQuestionData.english, correctEl);
+      setTimeout(() => checkAnswer(), 150);
+    }
+  } else {
+    for (const word of currentQuestionData.words) {
+      const optionEl = Array.from(options).find(
+        (el) => el.textContent.trim() === word && !el.classList.contains("selected")
+      );
+      if (optionEl) selectWord(word, optionEl);
+    }
+    if (selectedWords.length === currentQuestionData.words.length) {
+      setTimeout(() => checkAnswer(), 150);
+    }
   }
 }
 

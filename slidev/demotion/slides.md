@@ -168,10 +168,8 @@ layout: cover
 </style>
 
 ---
-
 layout: ProjectShowcase
 image: /assets/lusk.png
-
 ---
 
 ## Lusk
@@ -184,10 +182,20 @@ image: /assets/lusk.png
 - Overtook as **main backend engineer** over time
 
 ---
+layout: ProjectShowcase
+image: /assets/lusk.png
+---
 
+## Lusk — Technical challenges & accomplishments
+
+- Wrote an **email conversation/candidate application parser** which imports candidates into the app directly
+- Solved major technical challenges related to **app startup** left by previous engineers (saved a lot of hassle)
+- **Refactored a large part** of the application for better code and readability
+- Learned **WebSockets with PHP** for real-time chat implementation in another system
+
+---
 layout: ProjectShowcase
 image: /assets/digitoo.jpg
-
 ---
 
 ## Digitoo
@@ -198,10 +206,20 @@ image: /assets/digitoo.jpg
 - Transformed from multi‑provider integration to a standalone product with high client satisfaction
 
 ---
+layout: ProjectShowcase
+image: /assets/digitoo.jpg
+---
 
+## Digitoo — Technical challenges & accomplishments
+
+- Oversaw the whole implementation **start to finish**
+- Helped with **hiring and team leading** on the client side
+- **Communication with technical partners** (Datasentics, Wflow, Rossum)
+- Wrote a comprehensive **invoice data validation module** connected to tax services (VIES/ARES)
+
+---
 layout: ProjectShowcase
 image: /assets/refsite.png
-
 ---
 
 ## Refsite
@@ -212,10 +230,19 @@ image: /assets/refsite.png
 - Mentored junior engineers while delivering a robust, scalable system
 
 ---
+layout: ProjectShowcase
+image: /assets/refsite.png
+---
 
+## Refsite — Technical challenges & accomplishments
+
+- **Pioneered Prisma v2** on the project
+- Designed the **GraphQL schema and domains** necessary for this
+- Helped set up and implement the backend, **aiding 2 junior BE engineers**
+
+---
 layout: ProjectShowcase
 image: /assets/sakurabook.png
-
 ---
 
 ## Sakurabook
@@ -226,10 +253,20 @@ image: /assets/sakurabook.png
 - Full‑stack delivery with internationalization and e‑commerce integration
 
 ---
+layout: ProjectShowcase
+image: /assets/sakurabook.png
+---
 
+## Sakurabook — Technical challenges & accomplishments
+
+- Implemented a **NestJS application** acting as a Shopify plugin connected to billing providers (Stripe, Shopify and **Google Pub/Sub**) and **Google Calendar** integration for booking
+- Helped **reform the whole technical brief** because there were factual issues with it (nonsensical requirements)
+- Helped with communication with the **Japanese client** (can communicate Japanese at **N3 intermediate** level)
+- Helped set up and implement the backend, **aiding 2 junior BE engineers**
+
+---
 layout: ProjectShowcase
 image: /assets/investbay.png
-
 ---
 
 ## Investbay
@@ -240,10 +277,8 @@ image: /assets/investbay.png
 - Leveraged internal templates and creative compromises to ship a production‑ready solution
 
 ---
-
 layout: ProjectShowcase
 image: /assets/remangu.webp
-
 ---
 
 ## Remangu
@@ -256,10 +291,20 @@ image: /assets/remangu.webp
 - Created playtesting platform demo for GDC 2025 with pre‑release AWS tech
 
 ---
+layout: ProjectShowcase
+image: /assets/remangu.webp
+---
 
+## Remangu — Technical challenges & accomplishments
+
+- **Main engineer** of the whole platform for 3 years now
+- Currently the **only full-stack engineer**
+- Heavily transformed the development into **AI-powered engineering** in cooperation with a very technical client
+- Helping **shaping and improving** the requested features proactively
+
+---
 layout: ProjectShowcaseRight
 image: /assets/skoala.png
-
 ---
 
 ## Skoala
@@ -269,11 +314,10 @@ image: /assets/skoala.png
 - Checked **most of the boxes** needed for a new project to get **up and running fast**
 - Validated templates, tooling, and practices across a real client delivery
 
----
 
+---
 layout: ProjectShowcase
 image: /assets/deliella.png
-
 ---
 
 ## Deliciously Ella
@@ -285,16 +329,25 @@ image: /assets/deliella.png
 - Established a clear technical roadmap for the platform
 
 ---
+layout: ProjectShowcase
+image: /assets/deliella.png
+---
 
-## layout: SectionTitle
+## Deliciously Ella — Technical challenges & accomplishments
+
+- Performed an **AI-driven analysis** of the whole codebase to fill in basically non-existing technical documentation, including analysis of current mobile apps to serve as materials for new backend
+- Proposed a **complete rewrite** of the backend systems and APIs to improve maintainability and developer velocity
+- Currently serving as **technical overview** over another engineer and driving **AI-powered development** in our little BE team
+
+---
+layout: SectionTitle
+---
 
 # Internal Work & Representing Applifting
 
 ---
-
 layout: ProjectShowcaseRight
-image: /assets/internal/template.png
-
+image: /assets/internal/internal.png
 ---
 
 ## Tech Leading & Internal Work
@@ -305,10 +358,8 @@ image: /assets/internal/template.png
 - Creation and maintenance of a **backend/Node.js knowledge base** for internal use
 
 ---
-
 layout: ProjectShowcaseRight
 image: /assets/vse/photo.jpeg
-
 ---
 
 ## University of Economics in Prague
@@ -321,10 +372,8 @@ image: /assets/vse/photo.jpeg
 - Transitioning from active teaching to a technical-support role
 
 ---
-
 layout: ProjectShowcaseRight
 image: /assets/crewtalks/prisma.png
-
 ---
 
 ## Crew Talks
@@ -333,16 +382,14 @@ image: /assets/crewtalks/prisma.png
 - Talk on **Cursor and agentic development** before mainstream adoption — complete web game without writing code manually
 
 ---
-
-## layout: SectionTitle
+layout: SectionTitle
+---
 
 # Other Skills
 
 ---
-
 layout: ProjectShowcaseRight
 video: /assets/bladeimpact/video.mp4
-
 ---
 
 ## Blade Impact VR
@@ -353,8 +400,8 @@ video: /assets/bladeimpact/video.mp4
 - Generated several thousand USD in revenue to date
 
 ---
-
-## layout: ContentStagger
+layout: ContentStagger
+---
 
 # Going Forward...
 
@@ -363,8 +410,8 @@ video: /assets/bladeimpact/video.mp4
 - **Longer term**: Open to growing into **architect** when it feels natural. For now: enjoy delivery and help drive **AI adoption** in the company.
 
 ---
-
-## layout: ContentStagger
+layout: ContentStagger
+---
 
 # What I'm asking
 
@@ -376,7 +423,7 @@ video: /assets/bladeimpact/video.mp4
 - **Ongoing contribution**: Support the new Tech Lead in **non‑project time** (reviews, standards, onboarding).
 
 ---
-
-## layout: SectionTitle
+layout: SectionTitle
+---
 
 # Thank you
