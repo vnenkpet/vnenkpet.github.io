@@ -340,6 +340,26 @@ image: /assets/deliella.png
 - Currently serving as **technical overview** over another engineer and driving **AI-powered development** in our little BE team
 
 ---
+layout: ProjectShowcase
+image: /assets/deployment-before.svg
+---
+
+## Technical challenges — Before
+
+- Legacy deployment and architecture
+- Complex, hard-to-maintain setup
+
+---
+layout: DiagramShowcaseDeployment
+---
+
+## Technical challenges — After (desired state)
+
+- Architected by me
+- Clear separation: NestJS, Payload CMS, Cloud services, Mobile, Third-party integrations
+- Single source of truth for APIs and data
+
+---
 layout: SectionTitle
 ---
 
@@ -421,17 +441,6 @@ layout: ContentStagger
 <SalaryLine />
 
 - **Ongoing contribution**: Support the new Tech Lead in **non‑project time** (reviews, standards, onboarding).
-
----
-layout: DiagramShowcase
----
-
-## Technical challenges
-
-### Example stack
-
-- **Full-stack architecture** — React, GraphQL/REST, NestJS, Prisma, Postgres
-- **Integrations** — AWS, Stripe, and other third-party services
 
 ---
 layout: SectionTitle
