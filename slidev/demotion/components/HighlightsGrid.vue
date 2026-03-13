@@ -12,6 +12,14 @@ const ASSETS = [
   "/assets/skoala.png",
 ] as const;
 
+// Resolve asset URLs with base path so they work under /demotion/ on GitHub Pages (same as ProjectShowcase layouts)
+const base = (import.meta.env?.BASE_URL ?? "").replace(/\/+$/, "");
+const resolveAsset = (path: string) => {
+  const p = path.startsWith("/") ? path.slice(1) : path;
+  const joined = p ? `${base}/${p}`.replace(/\/+/g, "/") : base || "/";
+  return joined.startsWith("http") ? joined : joined.startsWith("/") ? joined : `/${joined}`;
+};
+
 const COLS = 24;
 const ROWS = 64;
 const CELL_H = 50;
@@ -31,7 +39,7 @@ onMounted(() => {
   const singleRepeat: string[] = [];
   const pool = shuffleArray([...ASSETS]);
   for (let i = 0; i < ROWS * COLS; i++) {
-    singleRepeat.push(pool[i % pool.length]);
+    singleRepeat.push(resolveAsset(pool[i % pool.length]));
   }
   const shuffled = shuffleArray(singleRepeat);
   displayList.value = [...shuffled, ...shuffled];
