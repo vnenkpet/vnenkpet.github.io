@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KCD Haggle – Make an offer</title>
+    <meta name="description" content="Haggle like in Kingdom Come: Deliverance. Share a link with your offer; friends can counter-offer and share back." />
+    <meta property="og:title" content="KCD Haggle – Make an offer" />
+    <meta property="og:description" content="Haggle like in Kingdom Come: Deliverance. Share a link with your offer; friends can counter-offer and share back." />
+    <meta property="og:image" content="og-default.png" />
+    <meta property="og:type" content="website" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="root">
+      <div class="setup-flow" id="setupFlow" aria-hidden="false">
+        <div class="setup-bg" aria-hidden="true">
+          <img src="henry-bg.png" alt="" class="setup-bg-img" />
+        </div>
+        <div class="setup-card setup-step" id="setupStep1">
+          <h1 class="setup-title">How much are you offering?</h1>
+          <form class="setup-form" id="formOffer" novalidate>
+            <label for="inputOffer" class="setup-label">Your offer</label>
+            <input type="number" id="inputOffer" class="setup-input" min="1" step="1" placeholder="e.g. 300" required autofocus />
+            <button type="submit" class="setup-btn">Next</button>
+          </form>
+        </div>
+        <div class="setup-card setup-step hidden" id="setupStep2">
+          <h1 class="setup-title">Set the range</h1>
+          <p class="setup-hint">Adjust the lower and upper limits for the haggling bar. Your offer will sit between them.</p>
+          <form class="setup-form" id="formRange" novalidate>
+            <label for="inputMin" class="setup-label">Lower end (minimum)</label>
+            <input type="number" id="inputMin" class="setup-input" min="0" step="1" required />
+            <label for="inputMax" class="setup-label">Higher end (maximum)</label>
+            <input type="number" id="inputMax" class="setup-input" min="1" step="1" required />
+            <button type="submit" class="setup-btn">Start haggling</button>
+          </form>
+        </div>
+      </div>
+      <div class="scene-letterbox hidden" id="captureArea">
+        <div class="scene hidden">
+          <div class="bg" aria-hidden="true">
+            <img src="henry-bg.png" alt="" class="bg-image" id="bgImage" />
+            <div class="bg-fallback" id="bgFallback"></div>
+          </div>
+          <div class="haggle-panel">
+          <div class="bar-container">
+            <div class="bar-header">
+              <span class="pay-label pay-top">pay <span id="payMax">46140</span></span>
+            </div>
+            <div class="bar-track" id="barTrack">
+              <div class="bar-marker bar-marker--current" id="currentMarker">
+                <span class="bar-marker-arrow"></span>
+                <span class="bar-marker-value" id="currentOfferDisplay">300</span>
+              </div>
+              <div class="bar-marker bar-marker--previous hidden" id="previousOfferMarker">
+                <span class="bar-marker-prev-value" id="previousOfferDisplay"></span>
+              </div>
+              <div class="bar-handle" id="barHandle" role="slider" aria-valuemin="0" aria-valuemax="46140" aria-valuenow="300" tabindex="0"></div>
+            </div>
+            <div class="bar-footer">
+              <span class="pay-label pay-bottom">pay <span id="payMin">5780</span></span>
+            </div>
+          </div>
+        </div>
+          <div class="ui-prompts">
+            <button type="button" class="ui-prompt-btn">Help T</button>
+            <button type="button" class="btn-make-offer" id="btnMakeOffer" aria-label="Make offer (E)">Make offer E</button>
+            <button type="button" class="ui-prompt-btn">Cancel Esc</button>
+            <button type="button" class="ui-prompt-link" id="btnNewSession">Create a new haggling session</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-overlay" id="modalOverlay" aria-hidden="true">
+      <div class="modal" id="modal" role="dialog" aria-labelledby="modalTitle" aria-modal="true">
+        <div class="modal-header">
+          <h2 id="modalTitle">Share your offer</h2>
+          <button type="button" class="modal-close" id="modalClose" aria-label="Close">×</button>
+        </div>
+        <div class="modal-body">
+          <p class="modal-instructions">Send this link to your friend. They can move the slider to make a counter-offer and share the link back.</p>
+          <div class="modal-link-row">
+            <input type="text" class="modal-link-input" id="modalLinkInput" readonly aria-label="Share link" />
+            <button type="button" class="btn-copy" id="btnCopyLink">Copy link</button>
+          </div>
+          <p class="modal-copy-feedback hidden" id="copyFeedback">Copied!</p>
+          <div class="modal-screenshot-wrap">
+            <p class="modal-screenshot-label">Preview</p>
+            <div class="modal-screenshot-placeholder" id="screenshotPlaceholder">Screenshot will appear here</div>
+            <img class="modal-screenshot-img hidden" id="screenshotImg" alt="Screenshot of your offer" />
+          </div>
+          <button type="button" class="btn-download" id="btnDownloadScreenshot">Download screenshot</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

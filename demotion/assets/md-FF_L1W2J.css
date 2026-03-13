@@ -1,0 +1,1 @@
+.salary-line[data-v-402fbbd5]{perspective:1400px;min-height:200px;padding:.5rem 0}.salary-line-camera[data-v-402fbbd5]{transform-style:preserve-3d;transform:translateZ(-80px) scale(.88);opacity:0;animation:salary-camera-in-402fbbd5 1s cubic-bezier(.22,1,.36,1) forwards}@keyframes salary-camera-in-402fbbd5{to{transform:translateZ(0) scale(1);opacity:1}}

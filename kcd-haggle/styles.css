@@ -1,0 +1,656 @@
+/* KCD Haggle – layout and visuals */
+:root {
+  --bar-width: 120px;
+  --bar-gold: #c9a227;
+  --bar-gold-dark: #8b6914;
+  --bar-red: #6b2a1a;
+  --bar-red-dark: #4a1a10;
+  --bar-track: #2a1810;
+  --text-gold: #e8c547;
+  --text-red: #c94a3a;
+  --text-muted: #a08060;
+  --font-display: "Cinzel", serif;
+  --touch-min: 44px;
+  /* Wide game letterbox (black stripes top/bottom) */
+  --letterbox-aspect: 21 / 9;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100%;
+  font-family: var(--font-display);
+  color: #e0d0b0;
+  background: #0a0604;
+  overflow-x: hidden;
+}
+
+.root {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #000;
+}
+
+/* Wide aspect-ratio viewport with black letterbox – always 21:9; content can extend so bar is never clipped */
+.scene-letterbox {
+  width: min(100vw, calc(100vh * (21 / 9)));
+  aspect-ratio: var(--letterbox-aspect);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+  background: #000;
+  flex-shrink: 0;
+}
+
+.scene-letterbox .scene {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  overflow: visible;
+}
+
+/* Background: Henry (right) + dark left for bar */
+.bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.bg-image {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 60% 50%;
+  display: block;
+}
+
+.bg-image.load-error {
+  display: none;
+}
+
+.bg-fallback {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: linear-gradient(90deg, #1a0f0a 0%, #1a0f0a 35%, #2a1812 50%, #1a0e08 100%);
+  background-size: cover;
+}
+
+/* Setup flow – full viewport so forms are always visible and accessible */
+.setup-flow {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.setup-flow.hidden {
+  display: none;
+}
+
+.setup-flow .setup-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.setup-bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 60% 50%;
+  display: block;
+}
+
+.setup-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(10, 6, 4, 0.92) 0%, rgba(10, 6, 4, 0.75) 50%, rgba(10, 6, 4, 0.6) 100%);
+  pointer-events: none;
+}
+
+.setup-card {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 420px;
+  padding: 2rem;
+  background: rgba(30, 22, 16, 0.95);
+  border: 1px solid var(--bar-gold-dark);
+  border-radius: 8px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+
+.setup-title {
+  margin: 0 0 1.25rem;
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--text-gold);
+  text-align: center;
+}
+
+.setup-hint {
+  margin: 0 0 1.25rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.45;
+  text-align: center;
+}
+
+.setup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.setup-label {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.setup-input {
+  min-height: var(--touch-min);
+  padding: 0.6rem 0.75rem;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  color: #e0d0b0;
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid var(--bar-gold-dark);
+  border-radius: 4px;
+}
+
+.setup-input:focus {
+  outline: none;
+  border-color: var(--bar-gold);
+}
+
+.setup-input::placeholder {
+  color: var(--text-muted);
+  opacity: 0.8;
+}
+
+.setup-btn {
+  min-height: var(--touch-min);
+  margin-top: 0.5rem;
+  padding: 0.65rem 1.25rem;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  color: var(--text-gold);
+  background: rgba(201, 162, 39, 0.25);
+  border: 1px solid var(--bar-gold-dark);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.setup-btn:hover {
+  background: rgba(201, 162, 39, 0.4);
+}
+
+/* Haggle panel (left) – never shrink so the bar is always visible */
+.haggle-panel {
+  position: relative;
+  z-index: 1;
+  flex-shrink: 0;
+  min-width: calc(var(--bar-width) + 4rem);
+  padding: 1rem 0.5rem 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.bar-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: var(--bar-width);
+}
+
+.bar-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem 0.5rem;
+  margin-bottom: 0.25rem;
+  font-size: 0.85rem;
+}
+
+.pay-label {
+  color: var(--text-muted);
+  margin-left: auto;
+}
+
+.pay-label span {
+  color: var(--text-gold);
+}
+
+/* Vertical bar track */
+.bar-track {
+  position: relative;
+  width: 24px;
+  height: 320px;
+  background: var(--bar-track);
+  border-radius: 4px;
+  border: 1px solid var(--bar-gold-dark);
+  flex-shrink: 0;
+}
+
+.bar-marker {
+  position: absolute;
+  left: 100%;
+  margin-left: 16px;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.bar-marker--current {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-gold);
+  z-index: 2;
+  transition: top 0.05s ease-out;
+}
+
+.bar-marker-arrow {
+  width: 0;
+  height: 0;
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  border-right: 8px solid var(--text-gold);
+}
+
+.bar-marker--previous {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  z-index: 1;
+}
+
+.bar-marker--previous.hidden {
+  display: none;
+}
+
+.bar-handle {
+  position: absolute;
+  left: -4px;
+  width: 32px;
+  height: 24px;
+  min-height: var(--touch-min);
+  min-width: var(--touch-min);
+  margin-left: -4px;
+  background: var(--bar-gold);
+  border: 2px solid var(--bar-gold-dark);
+  border-radius: 4px;
+  cursor: grab;
+  z-index: 3;
+  transform: translateY(-50%);
+  transition: box-shadow 0.15s ease;
+}
+
+.bar-handle:hover,
+.bar-handle:focus-visible {
+  box-shadow: 0 0 0 3px rgba(201, 162, 39, 0.5);
+}
+
+.bar-handle:active {
+  cursor: grabbing;
+}
+
+.bar-footer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+}
+
+.pay-bottom {
+  color: var(--text-muted);
+}
+
+/* Bottom-right prompts */
+.ui-prompts {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.btn-make-offer {
+  min-height: var(--touch-min);
+  padding: 0.5rem 0.75rem;
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  color: var(--text-gold);
+  background: rgba(40, 28, 12, 0.9);
+  border: 1px solid var(--bar-gold-dark);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.btn-make-offer:hover {
+  background: rgba(60, 42, 18, 0.95);
+  color: #f0d860;
+}
+
+.btn-make-offer:focus-visible {
+  outline: 2px solid var(--bar-gold);
+  outline-offset: 2px;
+}
+
+.ui-prompt-btn {
+  padding: 0;
+  font-family: var(--font-display);
+  font-size: inherit;
+  color: var(--text-muted);
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: right;
+  transition: color 0.2s;
+}
+
+.ui-prompt-btn:hover {
+  color: var(--text-gold);
+}
+
+.ui-prompt-link {
+  margin-top: 0.25rem;
+  padding: 0;
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: right;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.ui-prompt-link:hover {
+  color: var(--text-gold);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* Modal */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+
+.modal-overlay.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal {
+  background: linear-gradient(180deg, #1e1510, #15100c);
+  border: 1px solid var(--bar-gold-dark);
+  border-radius: 8px;
+  max-width: 480px;
+  width: 100%;
+  max-height: calc(100vh - 2rem);
+  overflow-y: auto;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid rgba(201, 162, 39, 0.2);
+}
+
+.modal-header h2 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-gold);
+}
+
+.modal-close {
+  width: var(--touch-min);
+  height: var(--touch-min);
+  padding: 0;
+  font-size: 1.5rem;
+  line-height: 1;
+  color: var(--text-muted);
+  background: transparent;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s, background 0.2s;
+}
+
+.modal-close:hover {
+  color: #e0d0b0;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.modal-body {
+  padding: 1.25rem;
+}
+
+.modal-instructions {
+  margin: 0 0 1rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.45;
+}
+
+.modal-link-row {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.modal-link-input {
+  flex: 1;
+  min-width: 0;
+  padding: 0.6rem 0.75rem;
+  font-family: inherit;
+  font-size: 0.8rem;
+  color: #e0d0b0;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--bar-gold-dark);
+  border-radius: 4px;
+}
+
+.modal-link-input:focus {
+  outline: none;
+  border-color: var(--bar-gold);
+}
+
+.btn-copy {
+  flex-shrink: 0;
+  min-width: var(--touch-min);
+  min-height: var(--touch-min);
+  padding: 0.6rem 1rem;
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  color: var(--text-gold);
+  background: rgba(201, 162, 39, 0.2);
+  border: 1px solid var(--bar-gold-dark);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-copy:hover {
+  background: rgba(201, 162, 39, 0.35);
+}
+
+.modal-copy-feedback {
+  margin: 0 0 1rem;
+  font-size: 0.85rem;
+  color: #6a9f6a;
+}
+
+.modal-copy-feedback.hidden {
+  display: none;
+}
+
+.modal-screenshot-wrap {
+  margin-bottom: 1rem;
+}
+
+.modal-screenshot-label {
+  margin: 0 0 0.5rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.modal-screenshot-placeholder {
+  min-height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px dashed var(--bar-gold-dark);
+  border-radius: 4px;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+.modal-screenshot-placeholder.hidden {
+  display: none;
+}
+
+.modal-screenshot-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  border: 1px solid var(--bar-gold-dark);
+}
+
+.modal-screenshot-img.hidden {
+  display: none;
+}
+
+.btn-download {
+  min-height: var(--touch-min);
+  width: 100%;
+  padding: 0.65rem 1rem;
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  color: var(--text-gold);
+  background: rgba(201, 162, 39, 0.25);
+  border: 1px solid var(--bar-gold-dark);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-download:hover {
+  background: rgba(201, 162, 39, 0.4);
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* Responsive: narrow viewports */
+@media (max-width: 600px) {
+  .scene {
+    max-width: 100%;
+  }
+
+  .bar-track {
+    height: 280px;
+  }
+
+  .bar-marker {
+    font-size: 0.7rem;
+  }
+
+  .bar-marker--current {
+    font-size: 1.1rem;
+  }
+
+  .haggle-panel {
+    padding-left: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --bar-width: 100px;
+  }
+
+  .bar-track {
+    width: 20px;
+    height: 260px;
+  }
+
+  .bar-handle {
+    width: 36px;
+    min-width: var(--touch-min);
+    min-height: var(--touch-min);
+  }
+
+  .ui-prompts {
+    bottom: 0.75rem;
+    right: 0.75rem;
+    font-size: 0.75rem;
+  }
+
+  .btn-make-offer {
+    padding: 0.5rem 0.6rem;
+    font-size: 0.85rem;
+  }
+}
