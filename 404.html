@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Redirecting…</title>
+<script>
+(function() {
+  var path = location.pathname;
+  if (path.startsWith('/demotion')) {
+    // Serve the Slidev SPA so client-side routing works (e.g. /demotion/3)
+    fetch('/demotion/')
+      .then(function(r) { return r.text(); })
+      .then(function(html) {
+        document.open();
+        document.write(html);
+        document.close();
+      })
+      .catch(function() {
+        document.body.innerHTML = '<p>Failed to load presentation. <a href="/demotion/">Open from start</a>.</p>';
+      });
+    return;
+  }
+  document.title = '404';
+  document.body = document.body || document.createElement('body');
+  document.body.innerHTML = '<h1>Not found</h1><p><a href="/">Home</a></p>';
+})();
+</script>
+</head>
+<body></body>
+</html>
