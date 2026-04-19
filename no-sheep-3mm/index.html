@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NoSheep rings — size 48, 3 mm wide</title>
+<meta name="description" content="Hand-picked rings from no-sheep.cz available in size 48 with a 3 mm width option.">
+<style>
+  :root {
+    --bg: #f8f5f0;
+    --text: #2a241d;
+    --muted: #6b6257;
+    --accent: #8b5e3c;
+    --card: #fff;
+    --border: #e8e0d2;
+    --price: #1b5e20;
+    --old: #9b8f80;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.5; }
+  header { padding: 2.5rem 1.5rem 1.5rem; text-align: center; background: linear-gradient(180deg, #f0e8da 0%, var(--bg) 100%); border-bottom: 1px solid var(--border); }
+  header h1 { margin: 0 0 0.5rem; font-size: 2rem; font-weight: 600; letter-spacing: -0.02em; }
+  header p { margin: 0.25rem 0; color: var(--muted); max-width: 620px; margin-left: auto; margin-right: auto; }
+  .stats { margin-top: 1rem; font-size: 0.9rem; color: var(--accent); }
+  main { max-width: 1200px; margin: 0 auto; padding: 1.5rem 1rem; }
+  .cards { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
+  @media (min-width: 680px) { .cards { grid-template-columns: repeat(2, 1fr); } }
+  @media (min-width: 1024px) { .cards { grid-template-columns: repeat(3, 1fr); } }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; display: flex; flex-direction: column; transition: box-shadow 0.2s, transform 0.2s; }
+  .card:hover { box-shadow: 0 12px 30px rgba(0,0,0,0.08); transform: translateY(-2px); }
+  .card-media { background: #fff; }
+  .gallery { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; aspect-ratio: 4/3; }
+  .gallery::-webkit-scrollbar { height: 4px; }
+  .gallery::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+  .gal-img { min-width: 100%; width: 100%; height: 100%; object-fit: cover; scroll-snap-align: start; background: #fff; }
+  .card-body { padding: 1.25rem; flex: 1; display: flex; flex-direction: column; gap: 0.75rem; }
+  .card-body h2 { margin: 0; font-size: 1.15rem; font-weight: 600; }
+  .card-body h2 a { color: inherit; text-decoration: none; }
+  .card-body h2 a:hover { color: var(--accent); }
+  .en-name { font-weight: 400; font-style: italic; color: var(--muted); font-size: 0.9rem; display: block; margin-top: 0.1rem; }
+  .desc { color: var(--muted); font-size: 0.9rem; margin: 0; }
+  .variants { display: flex; flex-direction: column; gap: 0.5rem; margin-top: auto; }
+  .variant { display: flex; gap: 0.75rem; align-items: center; background: #faf6ef; border: 1px solid var(--border); border-radius: 8px; padding: 0.5rem; }
+  .variant-img { width: 56px; height: 56px; object-fit: cover; border-radius: 6px; flex-shrink: 0; }
+  .variant-info { flex: 1; min-width: 0; }
+  .variant-label { font-size: 0.9rem; font-weight: 500; }
+  .variant-code { font-size: 0.75rem; color: var(--muted); }
+  .variant-price { font-size: 0.95rem; }
+  .price-now { color: var(--price); font-weight: 600; }
+  .price-old { color: var(--old); text-decoration: line-through; margin-left: 0.4rem; font-size: 0.85rem; }
+  .variant-avail { font-size: 0.75rem; color: var(--muted); }
+  .sold-out { display: inline-block; background: #c62828; color: #fff; font-size: 0.7rem; padding: 0.1rem 0.4rem; border-radius: 3px; }
+  .btn { display: inline-block; margin-top: 0.5rem; text-align: center; background: var(--accent); color: #fff; text-decoration: none; padding: 0.6rem 1rem; border-radius: 6px; font-weight: 500; transition: background 0.2s; font-size: 0.9rem; }
+  .btn:hover { background: #7a4f31; }
+  footer { text-align: center; padding: 2rem 1rem; color: var(--muted); font-size: 0.85rem; }
+  footer a { color: var(--accent); }
+</style>
+</head>
+<body>
+<header>
+  <h1>NoSheep rings 💍</h1>
+  <p>A curated list of rings from <a href="https://www.no-sheep.cz" target="_blank" rel="noopener" style="color: var(--accent);">no-sheep.cz</a> available in size&nbsp;<strong>48</strong> with a&nbsp;<strong>3&nbsp;mm</strong> width option.</p>
+  <p style="font-size: 0.85rem;">Ring names are kept in Czech (English in parentheses). Descriptions translated to English.</p>
+  <div class="stats">10 rings · 13 variants</div>
+</header>
+<main>
+  <div class="cards">
+    
+<article class="card">
+  <div class="card-media">
+    <div class="gallery">
+      <img class="gal-img" src="https://cdn.myshoptet.com/usr/www.no-sheep.cz/user/shop/detail/165_simply-wood-1.jpg?67f6e863" alt="Dřevěný prsten Simply Wood" loading="lazy">
+<img class="gal-img" src="https://cdn.myshoptet.com/usr/www.no-sheep.cz/user/shop/big/165_simply-wood-1.jpg?67f6e863" alt="Dřevěný prsten Simply Wood" loading="lazy">
+<img class="gal-img" src="https://cdn.myshoptet.com/usr/www.no-sheep.cz/user/shop/big/165-1_simply-wood-2.jpg?67f6e864" alt="Dřevěný prsten Simply Wood" loading="lazy">
+    </div>
+  </div>
+  <div class="card-body">
+    <h2><a href="https://www.no-sheep.cz/dreveny-prsten-simply-wood/" target="_blank" rel="noopener">Dřevěný prsten Simply Wood <span class="en-name">(Wooden Ring Simply Wood)</span></a></h2>
+    <p class="desc">A return to essentials. No ornament, no excess — just wood that speaks for itself. Zebrano with a delicate but expressive grain, shifting from brown to black-and-white.</p>
+    <div class="variants">
+      
+        <div class="variant">
+          <img class="variant-img" src="https://cdn.myshoptet.com/usr/www.no-sheep.cz/user/shop/detail/165_simply-wood-1.jpg?67f6e863" alt="Hnědá (Brown)" loading="lazy">
+          <div class="variant-info">
+            <div class="variant-label">Hnědá (Brown)</div>
+            <div class="variant-code">code: 165/48</div>
+            <div class="variant-price">
+              <span class="price-now">960 Kč</span>
+              <span class="price-old">1 200 Kč</span>
+            </div>
+            <div class="variant-avail">Možnost výroby do týdne · Made within a week</div>
+            
+          </div>
+        </div>
+        
+        <div class="variant">
+          <img class="variant-img" src="https://cdn.myshoptet.com/usr/www.no-sheep.cz/user/shop/detail/165_simply-wood-1.jpg?67f6e863" alt="Černá (Black)" loading="lazy">
+          <div class="variant-info">
+            <div class="variant-label">Černá (Black)</div>
+            <div class="variant-code">code: 165/296</div>
+            <div class="variant-price">
+              <span class="price-now">960 Kč</span>
+              <span class="price-old">1 200 Kč</span>
+            </div>
+            <div class="variant-avail">Možnost výroby do týdne · Made within a week</div>
+            
+          </div>
+        </div>
+        
+    </div>
+    <a class="btn" href="https://www.no-sheep.cz/dreveny-prsten-simply-wood/" target="_blank" rel="noopener">Open in shop →</a>
+  </div>
+</article>
+
+<article class="card">
+  <div class="card-media">
+    <div class="gallery">
+      <img class="gal-img" src="https://cdn.myshoptet.com/usr/www.no-sheep.cz/user/shop/detail/99_czech-wood-2.jpg?67f63753" alt="Dřevěný prsten Czech wood" loading="lazy">
+<img class="gal-img" src="https://cdn.myshoptet.com/usr/www.no-sheep.cz/user/shop/big/99_czech-wood-2.jpg?67f63753" alt="Dřevěný prsten Czech wood" loading="lazy">
+<img class="gal-img" src="https://cdn.myshoptet.com/usr/www.no-sheep.cz/user/shop/big/99-1_czech-wood-1.jpg?67f63753" alt="Dřevěný prsten Czech wood" loading="lazy">
+    </div>
+  </div>
+  <div class="card-body">
+    <h2><a href="https://www.no-sheep.cz/dreveny-prsten-czech-wood/" target="_blank" rel="noopener">Dřevěný prsten Czech wood <span class="en-name">(Wooden Ring Czech Wood)</span></a></h2>
+    <p class="desc">A ring that connects you with nature&#x27;s magic. Inner birch brings light softness, while plum wood on the outside adds warm depth, underlined by a thin copper stripe.</p>
+    <div class="variants">
+      
+        <div class="variant">
+          <img class="variant-img" src="https://cdn.myshoptet.com/usr/www.no-sheep.cz/user/shop/detail/99_czech-wood-2.jpg?67f63753" alt="Single variant" loading="lazy">
+          <div class="variant-info">
+            <div class="variant-label">Single variant</div>
+            <div class="variant-code">code: 99/48</div>
+            <div class="variant-price">
+              <span class="price-now">1 040 Kč</span>
+              <span class="price-old">1 300 Kč</span>
+            </div>
+            <div class="variant-avail">Možnost výroby do týdne · Made within a week</div>
+            
+          </div>
+        </div>
+        
+    </div>
+    <a class="btn" href="https://www.no-sheep.cz/dreveny-prsten-czech-wood/" target="_blank" rel="noopener">Open in shop →</a>
+  </div>
+</article>
+
+<article class="card">
+  <div class="card-media">
+    <div class="gallery">
+      <img class="gal-img" src="https://cdn.myshoptet.com/usr/www.no-sheep.cz/user/shop/detail/105_dreveny-prsten-let-it-snow.jpg?69c45199" alt="Dřevěný prsten Let it snow" loading="lazy">
+<img class="gal-img" src="https://cdn.myshoptet.com/usr/www.no-sheep.cz/user/shop/big/105_dreveny-prsten-let-it-snow.jpg?69c45199" alt="Dřevěný prsten Let it snow" loading="lazy">
+<img class="gal-img" src="https://cdn.myshoptet.com/usr/www.no-sheep.cz/user/shop/big/105-1_dreveny-prsten-let-it-snow.jpg?69c4519b" alt="Dřevěný prsten Let it snow" loading="lazy">
+    </div>
+  </div>
+  <div class="card-body">
+    <h2><a href="https://www.no-sheep.cz/dreveny-prsten-let-it-snow/" target="_blank" rel="noopener">Dřevěný prsten Let it snow <span class="en-name">(Wooden Ring Let it Snow)</span></a></h2>
+    <p class="desc">Captures the silence of falling snowflakes. Grey oak inside evokes a winter morning&#x27;s chill; snow-white wood outside recalls fresh snow, subtly accented with a stainless steel line.</p>
+    <div class="variants">
+      
+        <div class="variant">
+          <img class="variant-img" src="https://cdn.myshoptet.com/usr/www.no-sheep.cz/user/shop/detail/105_dreveny-prsten-let-it-snow.jpg?69c45199" alt="Single variant" loading="lazy">
+          <div class="variant-info">
+            <div class="variant-label">Single variant</div>
+            <div class="variant-code">code: 105/48</div>
+            <div class="variant-price">
+              <span class="price-now">1 120 Kč</span>
+              <span class="price-old">1 400 Kč</span>
+            </div>
+            <div class="variant-avail">Možnost výroby do týdne · Made within a week</div>
+            
+          </div>
+        </div>
+        
+    </div>
+    <a class="btn" href="https://www.no-sheep.cz/dreveny-prsten-let-it-snow/" target="_blank" rel="noopener">Open in shop →</a>
+  </div>
+</article>
+
+<article class="card">
+  <div class="card-media">
+    <div class="gallery">
+      <img class="gal-img" src="https://cdn.myshoptet.com/usr/www.no-sheep.cz/user/shop/detail/117_black-roebuck-1.jpg?67f6e10c" alt="Dřevěný prsten Black Roebuck" loading="lazy">
+<img class="gal-img" src="https://cdn.myshoptet.com/usr/www.no-sheep.cz/user/shop/big/117_black-roebuck-1.jpg?67f6e10c" alt="Dřevěný prsten Black Roebuck" loading="lazy">
+<img class="gal-img" src="https://cdn.myshoptet.com/usr/www.no-sheep.cz/user/shop/big/117-1_black-roebuck-2.jpg?67f6e10d" alt="Dřevěný prsten Black Roebuck" loading="lazy">
+    </div>
+  </div>
+  <div class="card-body">
+    <h2><a href="https://www.no-sheep.cz/dreveny-prsten-black-roebuck/" target="_blank" rel="noopener">Dřevěný prsten Black Roebuck <span class="en-name">(Wooden Ring Black Roebuck)</span></a></h2>
+    <p class="desc">A ring about contrast. Light and dark, antler and ebony. Raw, wild, white natural texture on the surface; deep, calm, balanced darkness inside. Two worlds joined in a single circle.</p>
+    <div class="variants">
+      
+        <div class="variant">
+          <img class="variant-img" src="https://cdn.myshoptet.com/usr/www.no-sheep.cz/user/shop/detail/117_black-roebuck-1.jpg?67f6e10c" alt="Single variant" loading="lazy">
+          <div class="variant-info">
+            <div class="variant-label">Single variant</div>
+            <div class="variant-code">code: 117/48</div>
+            <div class="variant-price">
+              <span class="price-now">1 280 Kč</span>
+              <span class="price-old">1 600 Kč</span>
+            </div>
+            <div class="variant-avail">Možnost výroby do týdne · Made within a week</div>
+            
+          </div>
+        </div>
+        
+    </div>
+    <a class="btn" href="https://www.no-sheep.cz/dreveny-prsten-black-roebuck/" target="_blank" rel="noopener">Open in shop →</a>
+  </div>
+</article>
+
+<article class="card">
+  <div class="card-media">
+    <div class="gallery">
+      <img class="gal-img" src="https://cdn.myshoptet.com/usr/www.no-sheep.cz/user/shop/detail/114_black-and-white.jpg?67f6df01" alt="Dřevěný prsten Black and White" loading="lazy">
+<img class="gal-img" src="https://cdn.myshoptet.com/usr/www.no-sheep.cz/user/shop/big/114_black-and-white.jpg?67f6df01" alt="Dřevěný prsten Black and White" loading="lazy">
+    </div>
+  </div>
+  <div class="card-body">
+    <h2><a href="https://www.no-sheep.cz/dreveny-prsten-black-and-white/" target="_blank" rel="noopener">Dřevěný prsten Black and White <span class="en-name">(Wooden Ring Black and White)</span></a></h2>
+    <p class="desc">Unafraid of contrast. Black ebony, pale deer antler and a thin stripe of stainless steel — like night, day and the sharp line between them. Minimal yet full of detail.</p>
+    <div class="variants">
+      
+        <div class="variant">
+          <img class="variant-img" src="https://cdn.myshoptet.com/usr/www.no-sheep.cz/user/shop/detail/114_black-and-white.jpg?67f6df01" alt="Single variant" loading="lazy">
+          <div class="variant-info">
+            <div class="variant-label">Single variant</div>
+            <div class="variant-code">code: 114/48</div>
+            <div class="variant-price">
+              <span class="price-now">1 360 Kč</span>
+              <span class="price-old">1 700 Kč</span>
+            </div>
+            <div class="variant-avail">Možnost výroby do týdne · Made within a week</div>
+            
+          </div>
+        </div>
+        
+    </div>
+    <a class="btn" href="https://www.no-sheep.cz/dreveny-prsten-black-and-white/" target="_blank" rel="noopener">Open in shop →</a>
+  </div>
+</article>
+
+<article class="card">
+  <div class="card-media">
+    <div class="gallery">
+      <img class="gal-img" src="https://cdn.myshoptet.com/usr/www.no-sheep.cz/user/shop/detail/237_dreveny-prsten-slim-deer-line.jpg?699b64d1" alt="Dřevěný prsten Slim Deer Line" loading="lazy">
+<img class="gal-img" src="https://cdn.myshoptet.com/usr/www.no-sheep.cz/user/shop/big/237_dreveny-prsten-slim-deer-line.jpg?699b64d1" alt="Dřevěný prsten Slim Deer Line" loading="lazy">
+<img class="gal-img" src="https://cdn.myshoptet.com/usr/www.no-sheep.cz/user/shop/big/237-1_dreveny-prsten-slim-deer-line.jpg?699b64d4" alt="Dřevěný prsten Slim Deer Line" loading="lazy">
+    </div>
+  </div>
+  <div class="card-body">
+    <h2><a href="https://www.no-sheep.cz/dreveny-prsten-slim-deer-line/" target="_blank" rel="noopener">Dřevěný prsten Slim Deer Line <span class="en-name">(Wooden Ring Slim Deer Line)</span></a></h2>
+    <p class="desc">From the Slim line, designed for those who prefer subtlety over boldness. The thin profile sits lightly on the hand and feels elegant and natural — ideal for women or anyone who likes discreet jewellery.</p>
+    <div class="variants">
+      
+        <div class="variant">
+          <img class="variant-img" src="https://cdn.myshoptet.com/usr/www.no-sheep.cz/user/shop/detail/237_dreveny-prsten-slim-deer-line.jpg?699b64d1" alt="Single variant" loading="lazy">
+          <div class="variant-info">
+            <div class="variant-label">Single variant</div>
+            <div class="variant-code">code: 237/48</div>
+            <div class="variant-price">
+              <span class="price-now">1 440 Kč</span>
+              <span class="price-old">1 800 Kč</span>
+            </div>
+            <div class="variant-avail">Možnost výroby do týdne · Made within a week</div>
+            
+          </div>
+        </div>
+        
+    </div>
+    <a class="btn" href="https://www.no-sheep.cz/dreveny-prsten-slim-deer-line/" target="_blank" rel="noopener">Open in shop →</a>
+  </div>
+</article>
+
+<article class="card">
+  <div class="card-media">
+    <div class="gallery">
+      <img class="gal-img" src="https://cdn.myshoptet.com/usr/www.no-sheep.cz/user/shop/detail/239_dreveny-prsten-slim-goldie.jpg?699b66ea" alt="Dřevěný prsten Slim Goldie" loading="lazy">
+<img class="gal-img" src="https://cdn.myshoptet.com/usr/www.no-sheep.cz/user/shop/big/239_dreveny-prsten-slim-goldie.jpg?699b66ea" alt="Dřevěný prsten Slim Goldie" loading="lazy">
+<img class="gal-img" src="https://cdn.myshoptet.com/usr/www.no-sheep.cz/user/shop/big/239-1_dreveny-prsten-slim-goldie.jpg?699b66eb" alt="Dřevěný prsten Slim Goldie" loading="lazy">
+<img class="gal-img" src="https://cdn.myshoptet.com/usr/www.no-sheep.cz/user/shop/big/239-2_dreveny-prsten-slim-goldie.jpg?69c451e4" alt="Dřevěný prsten Slim Goldie" loading="lazy">
+<img class="gal-img" src="https://cdn.myshoptet.com/usr/www.no-sheep.cz/user/shop/big/239-3_dreveny-prsten-slim-goldie.jpg?69c451e8" alt="Dřevěný prsten Slim Goldie" loading="lazy">
+    </div>
+  </div>
+  <div class="card-body">
+    <h2><a href="https://www.no-sheep.cz/dreveny-prsten-slim-goldie/" target="_blank" rel="noopener">Dřevěný prsten Slim Goldie <span class="en-name">(Wooden Ring Slim Goldie)</span></a></h2>
+    <p class="desc">From the Slim line — subtle and elegant. The thin profile sits lightly and naturally on the hand. Warm wood tones, great for delicate hands or everyday wear.</p>
+    <div class="variants">
+      
+        <div class="variant">
+          <img class="variant-img" src="https://cdn.myshoptet.com/usr/www.no-sheep.cz/user/shop/detail/239_dreveny-prsten-slim-goldie.jpg?699b66ea" alt="Světle hnědá (Light brown)" loading="lazy">
+          <div class="variant-info">
+            <div class="variant-label">Světle hnědá (Light brown)</div>
+            <div class="variant-code">code: 239/48</div>
+            <div class="variant-price">
+              <span class="price-now">1 520 Kč</span>
+              <span class="price-old">1 900 Kč</span>
+            </div>
+            <div class="variant-avail">Možnost výroby do týdne · Made within a week</div>
+            
+          </div>
+        </div>
+        
+        <div class="variant">
+          <img class="variant-img" src="https://cdn.myshoptet.com/usr/www.no-sheep.cz/user/shop/detail/239_dreveny-prsten-slim-goldie.jpg?699b66ea" alt="Tmavě hnědá (Dark brown)" loading="lazy">
+          <div class="variant-info">
+            <div class="variant-label">Tmavě hnědá (Dark brown)</div>
+            <div class="variant-code">code: 239/234</div>
+            <div class="variant-price">
+              <span class="price-now">1 520 Kč</span>
+              <span class="price-old">1 900 Kč</span>
+            </div>
+            <div class="variant-avail">Možnost výroby do týdne · Made within a week</div>
+            
+          </div>
+        </div>
+        
+    </div>
+    <a class="btn" href="https://www.no-sheep.cz/dreveny-prsten-slim-goldie/" target="_blank" rel="noopener">Open in shop →</a>
+  </div>
+</article>
+
+<article class="card">
+  <div class="card-media">
+    <div class="gallery">
+      <img class="gal-img" src="https://cdn.myshoptet.com/usr/www.no-sheep.cz/user/shop/detail/129_wooden-steel--1.jpg?67f6e415" alt="Prsten Wooden Steel s ocelovou vložkou" loading="lazy">
+<img class="gal-img" src="https://cdn.myshoptet.com/usr/www.no-sheep.cz/user/shop/big/129_wooden-steel--1.jpg?67f6e415" alt="Prsten Wooden Steel s ocelovou vložkou" loading="lazy">
+<img class="gal-img" src="https://cdn.myshoptet.com/usr/www.no-sheep.cz/user/shop/big/129-1_wooden-steel--2.jpg?67f6e415" alt="Prsten Wooden Steel s ocelovou vložkou" loading="lazy">
+<img class="gal-img" src="https://cdn.myshoptet.com/usr/www.no-sheep.cz/user/shop/big/129-2_wooden-steel--3.jpg?67f6e416" alt="Prsten Wooden Steel s ocelovou vložkou" loading="lazy">
+<img class="gal-img" src="https://cdn.myshoptet.com/usr/www.no-sheep.cz/user/shop/big/129-3_wooden-steel--4.jpg?67f6e417" alt="Prsten Wooden Steel s ocelovou vložkou" loading="lazy">
+    </div>
+  </div>
+  <div class="card-body">
+    <h2><a href="https://www.no-sheep.cz/prsten-wooden-steel-s-ocelovou-vlozkou/" target="_blank" rel="noopener">Prsten Wooden Steel s ocelovou vložkou <span class="en-name">(Wooden Steel Ring (with stainless steel core))</span></a></h2>
+    <p class="desc">Like warm skin meeting cold metal. A firm, precise stainless steel core inside; warm wood outside — brown or reddish, like autumn leaves frozen in time.</p>
+    <div class="variants">
+      
+        <div class="variant">
+          <img class="variant-img" src="https://cdn.myshoptet.com/usr/www.no-sheep.cz/user/shop/detail/129_wooden-steel--1.jpg?67f6e415" alt="Hnědá (Brown)" loading="lazy">
+          <div class="variant-info">
+            <div class="variant-label">Hnědá (Brown)</div>
+            <div class="variant-code">code: 129/48</div>
+            <div class="variant-price">
+              <span class="price-now">1 560 Kč</span>
+              <span class="price-old">1 950 Kč</span>
+            </div>
+            <div class="variant-avail">Možnost výroby do týdne · Made within a week</div>
+            
+          </div>
+        </div>
+        
+        <div class="variant">
+          <img class="variant-img" src="https://cdn.myshoptet.com/usr/www.no-sheep.cz/user/shop/detail/129_wooden-steel--1.jpg?67f6e415" alt="Červená (Red)" loading="lazy">
+          <div class="variant-info">
+            <div class="variant-label">Červená (Red)</div>
+            <div class="variant-code">code: 129/296</div>
+            <div class="variant-price">
+              <span class="price-now">1 560 Kč</span>
+              <span class="price-old">1 950 Kč</span>
+            </div>
+            <div class="variant-avail">Možnost výroby do týdne · Made within a week</div>
+            
+          </div>
+        </div>
+        
+    </div>
+    <a class="btn" href="https://www.no-sheep.cz/prsten-wooden-steel-s-ocelovou-vlozkou/" target="_blank" rel="noopener">Open in shop →</a>
+  </div>
+</article>
+
+<article class="card">
+  <div class="card-media">
+    <div class="gallery">
+      <img class="gal-img" src="https://cdn.myshoptet.com/usr/www.no-sheep.cz/user/shop/detail/241_dreveny-prsten-slim-golden-deer.jpg?699b689e" alt="Dřevěný prsten Slim Golden Deer" loading="lazy">
+<img class="gal-img" src="https://cdn.myshoptet.com/usr/www.no-sheep.cz/user/shop/big/241_dreveny-prsten-slim-golden-deer.jpg?699b689e" alt="Dřevěný prsten Slim Golden Deer" loading="lazy">
+<img class="gal-img" src="https://cdn.myshoptet.com/usr/www.no-sheep.cz/user/shop/big/241-1_dreveny-prsten-slim-golden-deer.jpg?699b68a1" alt="Dřevěný prsten Slim Golden Deer" loading="lazy">
+    </div>
+  </div>
+  <div class="card-body">
+    <h2><a href="https://www.no-sheep.cz/dreveny-prsten-slim-golden-deer/" target="_blank" rel="noopener">Dřevěný prsten Slim Golden Deer <span class="en-name">(Wooden Ring Slim Golden Deer)</span></a></h2>
+    <p class="desc">From the Slim line — thin, light and elegant. Natural deer antler with a golden accent gives this ring a warm, refined character.</p>
+    <div class="variants">
+      
+        <div class="variant">
+          <img class="variant-img" src="https://cdn.myshoptet.com/usr/www.no-sheep.cz/user/shop/detail/241_dreveny-prsten-slim-golden-deer.jpg?699b689e" alt="Single variant" loading="lazy">
+          <div class="variant-info">
+            <div class="variant-label">Single variant</div>
+            <div class="variant-code">code: 241/48</div>
+            <div class="variant-price">
+              <span class="price-now">1 640 Kč</span>
+              <span class="price-old">2 050 Kč</span>
+            </div>
+            <div class="variant-avail">Možnost výroby do týdne · Made within a week</div>
+            
+          </div>
+        </div>
+        
+    </div>
+    <a class="btn" href="https://www.no-sheep.cz/dreveny-prsten-slim-golden-deer/" target="_blank" rel="noopener">Open in shop →</a>
+  </div>
+</article>
+
+<article class="card">
+  <div class="card-media">
+    <div class="gallery">
+      <img class="gal-img" src="https://cdn.myshoptet.com/usr/www.no-sheep.cz/user/shop/detail/186_mokume1-1.jpg?67f6f1fb" alt="Kovový prsten z Mokume Gane 1" loading="lazy">
+<img class="gal-img" src="https://cdn.myshoptet.com/usr/www.no-sheep.cz/user/shop/big/186_mokume1-1.jpg?67f6f1fb" alt="Kovový prsten z Mokume Gane 1" loading="lazy">
+<img class="gal-img" src="https://cdn.myshoptet.com/usr/www.no-sheep.cz/user/shop/big/186-1_mokume1-2.jpg?67f6f1fb" alt="Kovový prsten z Mokume Gane 1" loading="lazy">
+    </div>
+  </div>
+  <div class="card-body">
+    <h2><a href="https://www.no-sheep.cz/kovovy-prsten-z-mokume-gane/" target="_blank" rel="noopener">Kovový prsten z Mokume Gane 1 <span class="en-name">(Metal Ring Mokume Gane 1)</span></a></h2>
+    <p class="desc">A metal ring crafted using Mokume Gane — a traditional Japanese technique that layers different metals into distinctive wood-like patterns. Handcrafted, each piece is one of a kind.</p>
+    <div class="variants">
+      
+        <div class="variant">
+          <img class="variant-img" src="https://cdn.myshoptet.com/usr/www.no-sheep.cz/user/shop/detail/186_mokume1-1.jpg?67f6f1fb" alt="Single variant" loading="lazy">
+          <div class="variant-info">
+            <div class="variant-label">Single variant</div>
+            <div class="variant-code">code: 186/48</div>
+            <div class="variant-price">
+              <span class="price-now">1 720 Kč</span>
+              <span class="price-old">2 150 Kč</span>
+            </div>
+            <div class="variant-avail">Možnost výroby do týdne · Made within a week</div>
+            
+          </div>
+        </div>
+        
+    </div>
+    <a class="btn" href="https://www.no-sheep.cz/kovovy-prsten-z-mokume-gane/" target="_blank" rel="noopener">Open in shop →</a>
+  </div>
+</article>
+
+  </div>
+</main>
+<footer>
+  Sorted by price. Click any ring to open it on the original shop. Data scraped on 19 April 2026.
+</footer>
+</body>
+</html>
