@@ -24,6 +24,9 @@
     --accent-glow: rgba(91, 75, 219, 0.14);
     --done: #2e9e6b;
     --done-soft: #e3f3ea;
+    --warn: #b3760f;
+    --warn-soft: #fbf0da;
+    --warn-line: rgba(179, 118, 15, 0.32);
     --shadow: 0 1px 2px rgba(33, 31, 51, 0.04), 0 12px 30px rgba(33, 31, 51, 0.06);
     --shadow-sm: 0 1px 2px rgba(33, 31, 51, 0.05), 0 4px 12px rgba(33, 31, 51, 0.04);
     --radius: 16px;
@@ -46,6 +49,9 @@
     --accent-glow: rgba(169, 155, 255, 0.16);
     --done: #4ec38b;
     --done-soft: #1f3a2d;
+    --warn: #e2ab52;
+    --warn-soft: #2c2413;
+    --warn-line: rgba(226, 171, 82, 0.34);
     --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 14px 34px rgba(0, 0, 0, 0.34);
     --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3), 0 4px 14px rgba(0, 0, 0, 0.28);
   }
@@ -260,6 +266,24 @@
   .done-when .dw-label { font-family: "JetBrains Mono", monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--done); font-weight: 600; margin-bottom: 3px; }
   .done-when p { margin: 0; font-size: 15.5px; color: var(--ink); }
 
+  /* Watch-out (warning) callout */
+  .watch { margin-top: 26px; border-radius: var(--radius-sm); padding: 18px 20px; background: var(--warn-soft); border: 1px solid var(--warn-line); }
+  .watch-head { display: flex; align-items: center; gap: 10px; margin-bottom: 15px; }
+  .watch-head svg { width: 19px; height: 19px; color: var(--warn); flex: none; }
+  .watch-head span { font-family: "JetBrains Mono", monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--warn); font-weight: 600; }
+  .watch ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 13px; }
+  .watch li { font-size: 15.5px; color: var(--ink); padding-left: 20px; position: relative; line-height: 1.5; }
+  .watch li::before { content: "!"; position: absolute; left: 2px; top: 0; font-family: "JetBrains Mono", monospace; font-weight: 700; color: var(--warn); }
+  .watch li b { font-weight: 600; }
+  .watch li em { color: var(--muted); font-style: italic; }
+
+  /* Capabilities list */
+  .caps { list-style: none; margin: 0; padding: 0; display: grid; gap: 11px; }
+  .caps li { display: flex; gap: 12px; align-items: baseline; }
+  .caps li::before { content: "\203A"; color: var(--accent); font-family: "JetBrains Mono", monospace; font-weight: 700; flex: none; }
+  .caps li > span { font-size: 15.5px; color: var(--ink); }
+  .caps b { font-weight: 600; }
+
   /* Resources */
   .resources ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
   .resources li { display: flex; gap: 11px; align-items: baseline; font-size: 15.5px; }
@@ -408,6 +432,64 @@
         <div class="done-when">
           <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>
           <div><div class="dw-label">Done when</div><p>You can open VS Code, and both <code class="mono">node -v</code> and <code class="mono">git --version</code> print version numbers in your terminal. Your GitHub account exists.</p></div>
+        </div>
+      </section>
+
+      <!-- AI / Claude -->
+      <section class="module" id="mai" data-title="Using AI (Claude)">
+        <div class="m-head">
+          <div class="m-badge">AI</div>
+          <div class="titles">
+            <div class="m-eyebrow"><span>Your pair programmer</span><span class="time">read early · use throughout</span></div>
+            <h2>Learning with Claude</h2>
+          </div>
+        </div>
+        <p class="m-focus">You have a Claude subscription — so you already have a patient tutor, a code reviewer, and a tireless pair programmer available any time. Used well, it makes this whole roadmap faster and a lot less lonely. Used badly, it quietly stops you from actually learning. Here's how to get the good version.</p>
+
+        <div class="block">
+          <div class="block-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10z"/></svg> What it can do for you (basically everything)</div>
+          <ul class="caps">
+            <li><span><b>Explain anything, in plain words.</b> Paste an error, a file, or one confusing line and ask "what does this do?" or "why is this red?". No question is too basic — that's the whole point.</span></li>
+            <li><span><b>Be your always-on tutor.</b> Ask it to teach a concept before you write code: "explain the box model like I'm new," "what's the real difference between props and state?"</span></li>
+            <li><span><b>Review your code.</b> After a project: "review this for security, performance, and readability issues." Then read what it found — that's where a lot of the learning is.</span></li>
+            <li><span><b>Get you unstuck.</b> Share the error and the relevant file and it walks you through the cause, not just a patch.</span></li>
+            <li><span><b>Do the boring parts.</b> Boilerplate, scaffolding, repetitive edits — so your energy goes to the interesting bits.</span></li>
+            <li><span><b>Work across your whole project — that's Claude Code.</b> In your terminal or VS Code, Claude Code can read every file, run commands, use git, and edit across many files at once. It's an agent that lives in your codebase, not just a chat window.</span></li>
+          </ul>
+        </div>
+
+        <div class="block steps">
+          <div class="block-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 18l6-6-6-6"/></svg> Do this</div>
+          <ul class="checklist">
+            <li><label class="check"><input type="checkbox" data-id="mai-1"><span class="num"></span><span class="txt"><span class="step-title">Set up Claude Code</span><span class="step-body">With your subscription you can use it right away. Install from <a href="https://claude.com/claude-code" target="_blank" rel="noopener">claude.com/claude-code</a> and run <code class="mono">claude</code> inside a project folder — or add the VS Code extension. (There's also a chat at <a href="https://claude.ai" target="_blank" rel="noopener">claude.ai</a> for quick questions.)</span></span></label></li>
+            <li><label class="check"><input type="checkbox" data-id="mai-2"><span class="num"></span><span class="txt"><span class="step-title">Use it as a tutor, not an autopilot</span><span class="step-body">Next time you're stuck, ask it to <em>explain the concept and let you try first</em> — before you ask for finished code.</span></span></label></li>
+            <li><label class="check"><input type="checkbox" data-id="mai-3"><span class="num"></span><span class="txt"><span class="step-title">Have it review your own projects</span><span class="step-body">After each project, ask for a security / performance / clarity review and learn from the notes. It quietly teaches you what "good" looks like.</span></span></label></li>
+            <li><label class="check"><input type="checkbox" data-id="mai-4"><span class="num"></span><span class="txt"><span class="step-title">Read every diff before you accept it</span><span class="step-body">When Claude edits your files, read the changed lines. Understanding the change <em>is</em> the point — never merge code you can't explain.</span></span></label></li>
+            <li><label class="check"><input type="checkbox" data-id="mai-5"><span class="num"></span><span class="txt"><span class="step-title">Right-size the model</span><span class="step-body">Use a fast, lightweight model for small edits and questions; save the most powerful one for real architecture or hard bugs. In Claude Code you switch with <code class="mono">/model</code>. It's quicker and kinder to your usage limits.</span></span></label></li>
+          </ul>
+        </div>
+
+        <div class="watch">
+          <div class="watch-head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.9L1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9v4M12 17h.01"/></svg><span>Watch out for — where AI trips up</span></div>
+          <ul>
+            <li><b>It skims over security.</b> It'll happily write code with missing auth checks, unvalidated input, secrets hardcoded in files, or SQL-injection holes — and won't mention them unless you ask. Get in the habit of asking: "is this safe?"</li>
+            <li><b>It has performance blind spots.</b> Code that's fine on 10 rows can crawl on 10,000 — N+1 database queries, nested loops, loading everything into memory. It looks correct because it <em>is</em> correct — just slow.</li>
+            <li><b>It quietly drops things.</b> While editing a file it can remove a check, a case, or an edge-handling branch and never say so — and won't reintroduce it later either. This is exactly why you read the diff.</li>
+            <li><b>It over-engineers.</b> Ask for a button and get a plugin system, three new dependencies, and layers of abstraction you don't need. Push back: "give me the simplest version that works."</li>
+            <li><b>It's confidently wrong sometimes.</b> It can invent functions, APIs, or config options that don't exist. Cross-check against the real docs — the MDN / official-docs habit from Module 1 pays off here.</li>
+            <li><b>Slow, expensive overkill.</b> Pointing the heaviest model at a one-line typo fix is slow and burns your limits for no benefit. Match the tool to the size of the job.</li>
+            <li><b>The learning trap.</b> If you paste in code you can't explain, you didn't learn — you assembled. Early on especially, prefer "explain it so I can write it" over "just write it."</li>
+          </ul>
+        </div>
+
+        <div class="done-when" style="background: var(--accent-soft); border-color: color-mix(in srgb, var(--accent) 30%, transparent);">
+          <span class="ic" style="background: var(--accent);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></span>
+          <div><div class="dw-label" style="color: var(--accent-ink);">Why fundamentals still matter</div><p>The goal isn't to out-type the AI — you never will. It's to become the person who can tell when the AI is <em>wrong</em>: who spots the security hole, the slow query, the missing check, the needless complexity. AI is the fastest way to move; the fundamentals in these modules are how you steer. Learn both and you're dangerous in the best way.</p></div>
+        </div>
+
+        <div class="done-when">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>
+          <div><div class="dw-label">Done when</div><p>Claude Code is set up, you've used it to explain something and to review a project — and you can look at AI-written code and say what it does and whether you'd trust it.</p></div>
         </div>
       </section>
 
