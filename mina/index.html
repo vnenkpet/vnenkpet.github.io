@@ -284,6 +284,10 @@
   .caps li > span { font-size: 15.5px; color: var(--ink); }
   .caps b { font-weight: 600; }
 
+  /* Terminal command block */
+  .cmd { font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 13px; background: var(--surface-2); border: 1px solid var(--line); border-radius: 8px; padding: 10px 13px; margin-top: 9px; overflow-x: auto; white-space: pre; color: var(--ink); }
+  .cmd .p { color: var(--faint); user-select: none; }
+
   /* Resources */
   .resources ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
   .resources li { display: flex; gap: 11px; align-items: baseline; font-size: 15.5px; }
@@ -416,22 +420,29 @@
             <h2>Set up your machine</h2>
           </div>
         </div>
-        <p class="m-focus">Get the tools installed and accounts created. Boring but do it properly once, and you never think about it again.</p>
+        <p class="m-focus">Get your tools installed and accounts created. You're on a Mac, so we'll do it the way most developers do — with <b>Homebrew</b>, which turns the whole thing into a few one-line commands instead of a dozen downloads. Do it properly once and you never think about it again.</p>
+
+        <div class="done-when" style="background: var(--accent-soft); border-color: color-mix(in srgb, var(--accent) 30%, transparent);">
+          <span class="ic" style="background: var(--accent);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><path d="M3 6h18M16 10a4 4 0 0 1-8 0"/></svg></span>
+          <div><div class="dw-label" style="color: var(--accent-ink);">First — what is Homebrew?</div><p>Homebrew is a <b>package manager</b> for macOS — think of it as an app store for developer tools that you drive from the terminal. Instead of finding a website, downloading an installer, and clicking through it for every single tool, you type one line — <code class="mono">brew install git</code> — and it's done. It also keeps everything up to date at once with <code class="mono">brew upgrade</code>. Almost every Mac developer uses it; it's the tidiest way to install everything below. <em style="color: var(--muted);">(On Windows instead? Grab each tool from its download page, or use <code class="mono">winget</code>.)</em></p></div>
+        </div>
 
         <div class="block steps">
           <div class="block-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 18l6-6-6-6"/></svg> Do this</div>
           <ul class="checklist">
-            <li><label class="check"><input type="checkbox" data-id="m0-1"><span class="num"></span><span class="txt"><span class="step-title">Install VS Code</span><span class="step-body">Your code editor. Download from <a href="https://code.visualstudio.com/" target="_blank" rel="noopener">code.visualstudio.com</a>.</span></span></label></li>
-            <li><label class="check"><input type="checkbox" data-id="m0-2"><span class="num"></span><span class="txt"><span class="step-title">Install Node.js (LTS version)</span><span class="step-body">Get the LTS build from <a href="https://nodejs.org/" target="_blank" rel="noopener">nodejs.org</a>. Then open a terminal and run <code class="mono">node -v</code> — it should print a version number.</span></span></label></li>
-            <li><label class="check"><input type="checkbox" data-id="m0-3"><span class="num"></span><span class="txt"><span class="step-title">Install Git</span><span class="step-body">From <a href="https://git-scm.com/" target="_blank" rel="noopener">git-scm.com</a>. Check it with <code class="mono">git --version</code>.</span></span></label></li>
-            <li><label class="check"><input type="checkbox" data-id="m0-4"><span class="num"></span><span class="txt"><span class="step-title">Create a GitHub account</span><span class="step-body">Sign up at <a href="https://github.com" target="_blank" rel="noopener">github.com</a>. This is where all your code and projects will live.</span></span></label></li>
-            <li><label class="check"><input type="checkbox" data-id="m0-5"><span class="num"></span><span class="txt"><span class="step-title">Meet the browser DevTools</span><span class="step-body">Right-click any web page → <b>Inspect</b>. Poke around the Elements and Console tabs. You'll basically live in here from now on.</span></span></label></li>
+            <li><label class="check"><input type="checkbox" data-id="m0-1"><span class="num"></span><span class="txt"><span class="step-title">Install Homebrew</span><span class="step-body">Open the <b>Terminal</b> app (press ⌘-Space, type "Terminal", hit Enter). Paste this in and follow the prompts:<span class="cmd"><span class="p">$ </span>/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"</span>When it finishes it may print two lines to add Homebrew to your PATH — copy-paste and run them. Then check it works:<span class="cmd"><span class="p">$ </span>brew --version</span></span></span></label></li>
+            <li><label class="check"><input type="checkbox" data-id="m0-2"><span class="num"></span><span class="txt"><span class="step-title">Install VS Code</span><span class="step-body">Your code editor.<span class="cmd"><span class="p">$ </span>brew install --cask visual-studio-code</span></span></span></label></li>
+            <li><label class="check"><input type="checkbox" data-id="m0-3"><span class="num"></span><span class="txt"><span class="step-title">Install Git</span><span class="step-body">Version control — you'll learn it properly in Module 3.<span class="cmd"><span class="p">$ </span>brew install git</span>Check it with <code class="mono">git --version</code>.</span></span></label></li>
+            <li><label class="check"><input type="checkbox" data-id="m0-4"><span class="num"></span><span class="txt"><span class="step-title">Install Node.js</span><span class="step-body">The JavaScript runtime you'll use everywhere — and what powers the Claude Code CLI below.<span class="cmd"><span class="p">$ </span>brew install node</span>Check it with <code class="mono">node -v</code> — it should print a version number.</span></span></label></li>
+            <li><label class="check"><input type="checkbox" data-id="m0-5"><span class="num"></span><span class="txt"><span class="step-title">Install the Claude Code CLI</span><span class="step-body">Now that Node is installed, add Claude Code — your AI pair programmer (much more in the <a href="#mai">AI section</a>). It installs through Node's package manager:<span class="cmd"><span class="p">$ </span>npm install -g @anthropic-ai/claude-code</span>Then run <code class="mono">claude</code> inside any project folder to start it. More at <a href="https://claude.com/claude-code" target="_blank" rel="noopener">claude.com/claude-code</a>.</span></span></label></li>
+            <li><label class="check"><input type="checkbox" data-id="m0-6"><span class="num"></span><span class="txt"><span class="step-title">Create a GitHub account</span><span class="step-body">Sign up at <a href="https://github.com" target="_blank" rel="noopener">github.com</a>. This is where all your code and projects will live.</span></span></label></li>
+            <li><label class="check"><input type="checkbox" data-id="m0-7"><span class="num"></span><span class="txt"><span class="step-title">Meet the browser DevTools</span><span class="step-body">Right-click any web page → <b>Inspect</b>. Poke around the Elements and Console tabs. You'll basically live in here from now on.</span></span></label></li>
           </ul>
         </div>
 
         <div class="done-when">
           <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>
-          <div><div class="dw-label">Done when</div><p>You can open VS Code, and both <code class="mono">node -v</code> and <code class="mono">git --version</code> print version numbers in your terminal. Your GitHub account exists.</p></div>
+          <div><div class="dw-label">Done when</div><p>In the terminal, <code class="mono">brew --version</code>, <code class="mono">git --version</code> and <code class="mono">node -v</code> all print version numbers, VS Code opens, running <code class="mono">claude</code> starts Claude Code, and your GitHub account exists.</p></div>
         </div>
       </section>
 
@@ -461,7 +472,7 @@
         <div class="block steps">
           <div class="block-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 18l6-6-6-6"/></svg> Do this</div>
           <ul class="checklist">
-            <li><label class="check"><input type="checkbox" data-id="mai-1"><span class="num"></span><span class="txt"><span class="step-title">Set up Claude Code</span><span class="step-body">With your subscription you can use it right away. Install from <a href="https://claude.com/claude-code" target="_blank" rel="noopener">claude.com/claude-code</a> and run <code class="mono">claude</code> inside a project folder — or add the VS Code extension. (There's also a chat at <a href="https://claude.ai" target="_blank" rel="noopener">claude.ai</a> for quick questions.)</span></span></label></li>
+            <li><label class="check"><input type="checkbox" data-id="mai-1"><span class="num"></span><span class="txt"><span class="step-title">Open Claude Code and try it</span><span class="step-body">You installed it in <a href="#m0">Module 0</a>. Run <code class="mono">claude</code> inside one of your project folders and ask it to explain a file. (Prefer a browser? <a href="https://claude.ai" target="_blank" rel="noopener">claude.ai</a> has the same models in a chat window, and there's a VS Code extension too.)</span></span></label></li>
             <li><label class="check"><input type="checkbox" data-id="mai-2"><span class="num"></span><span class="txt"><span class="step-title">Use it as a tutor, not an autopilot</span><span class="step-body">Next time you're stuck, ask it to <em>explain the concept and let you try first</em> — before you ask for finished code.</span></span></label></li>
             <li><label class="check"><input type="checkbox" data-id="mai-3"><span class="num"></span><span class="txt"><span class="step-title">Have it review your own projects</span><span class="step-body">After each project, ask for a security / performance / clarity review and learn from the notes. It quietly teaches you what "good" looks like.</span></span></label></li>
             <li><label class="check"><input type="checkbox" data-id="mai-4"><span class="num"></span><span class="txt"><span class="step-title">Read every diff before you accept it</span><span class="step-body">When Claude edits your files, read the changed lines. Understanding the change <em>is</em> the point — never merge code you can't explain.</span></span></label></li>
